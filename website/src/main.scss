@@ -1,0 +1,137 @@
+// import functions and variables
+@import "../node_modules/bootstrap/scss/_functions";
+@import "../node_modules/bootstrap/scss/_variables";
+@import '../node_modules/bootstrap/scss/mixins';
+
+// custom colours
+$primary-black: #251F22;
+$dark-pink: #713D54;
+$medium-pink: #9F5E70;
+$primary-pink: #BB808A;
+$light-pink: #D59697;
+$primary-green: #94DD97;
+$light-green: #E5FFE6;
+$primary-white: #FCF6F8;
+
+// merge custom colours into bootstrap's default theme colours
+$brand-colours: (
+    "primary-black": rgba($primary-black, 1),
+    "dark-pink": rgba($dark-pink, 1),
+    "medium-pink": rgba($medium-pink, 1),
+    "primary-pink": rgba($primary-pink, 1),
+    "light-pink": rgba($light-pink, 1),
+    "primary-green": rgba($primary-green, 1),
+    "light-green": rgba($light-green, 1),
+    "primary-white": rgba($primary-white, 1),
+);
+$theme-colors: map-merge($brand-colours, $theme-colors);
+
+[data-bs-theme="custom"] {
+    // Custom Colours
+    --bs-body-bg: #{$medium-pink};
+    --bs-body-color: #{$primary-white};
+    --bs-heading-color: #{$primary-white};
+    --bs-body-color-rgb: #{to-rgb($light-pink)};
+    --bs-body-bg-rgb: #{to-rgb($primary-pink)};
+    --bs-tertiary-bg: #{$primary-green};
+    --bs-border-color: #{$primary-white};
+    --bs-secondary-bg: #{$medium-pink};
+    --bs-link-color-rgb: #{$primary-white};
+    --bs-link-hover-color-rgb: #{$primary-pink};
+    --bs-tertiary-bg-rgb: #{$dark-pink};
+
+    .main {
+        background-color: #{$primary-black};
+        padding: 1.5rem;
+    }
+
+    .navbar {
+        flex-wrap: nowrap !important;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    .nav-link {
+        color: #{$primary-white};
+    }
+
+    .nav-link:hover {
+        color: #{$primary-green};
+    }
+
+    .nav-link:active, .nav-link:focus {
+        color: #{$primary-white};
+    }
+
+    .btn-outline-primary-white:focus {
+        color: #{$primary-white};
+    }
+
+    .btn-outline-primary-white:hover {
+        color: #{$dark-pink};
+        background-color: #{$primary-white};
+    }
+
+    .btn-outline-primary-white:active {
+        color: #{$medium-pink} !important;
+        background-color: #{$primary-white} !important;
+    }
+
+    .bi-backpack4-fill {
+        line-height: 1;
+        background-color: transparent;
+        border: none;
+        color: #{$primary-white};
+    }
+
+    .bi-backpack4-fill:active, .bi-backpack4-fill:focus {
+        color: #{$primary-green};
+    }
+
+    #navbar-nav {
+        height: calc(100svh - 60px);
+        width: 100vw;
+        top: 60px;
+        background-color: #9F5E70;
+        position: fixed;
+        z-index: 1;
+    }
+
+    .slide-in {
+        transform: translateY(0);
+        transition: transform 0.3s ease-in-out;
+    }
+    
+    .slide-out {
+        transform: translateY(-130%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    @include media-breakpoint-down(md) {
+        nav > .large-nav {
+            display: none !important;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        nav > .bi-backpack4-fill {
+            display: none !important;
+        }
+
+        #navbar-nav {
+            display: none !important;
+        }
+    }
+}
+
+// custom fonts
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&family=Solway&display=swap');
+
+$font-family-sans-serif: "Solway";
+$headings-font-family: "Kumar One";
+$input-btn-font-family: "Kumar One";
+$form-text-font-style: "Kumar One";
+
+// import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
