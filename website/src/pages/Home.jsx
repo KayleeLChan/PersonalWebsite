@@ -40,6 +40,13 @@ function Home() {
             >
                 <p>I go to uoft!</p>
             </ParallaxLayer>
+            <ParallaxLayer
+                offset={4}
+            >
+                <div className="bg-medium-pink h-100 w-100 p-3">
+                    <h1>Proof of Concept!</h1>
+                </div>
+            </ParallaxLayer>
         </Parallax>
     );
 }
