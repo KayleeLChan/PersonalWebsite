@@ -41,8 +41,17 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     --bs-tertiary-bg-rgb: #{$dark-pink};
 
     .main {
-        background-color: #{$primary-black};
-        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0 3rem 0;
+    }
+
+    p {
+        color: var(--bs-body-color);
+    }
+
+    footer {
+        z-index: 2;
     }
 
     .navbar {
@@ -90,7 +99,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     }
 
     #navbar-nav {
-        height: calc(100svh - 60px);
+        height: calc(100% - 60px);
         width: 100vw;
         top: 60px;
         background-color: #9F5E70;
@@ -106,6 +115,39 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     .slide-out {
         transform: translateY(-130%);
         transition: transform 0.3s ease-in-out;
+    }
+
+    .parallax {
+        height: calc(100% - 120px - 7rem) !important;
+        box-sizing: border-box;
+    }
+
+    .parallax * {
+        display: flex;
+        justify-content: center;
+        -ms-overflow-style: none;  /* IE and Edge Hide Scrollbar */
+        scrollbar-width: none;  /* Firefox Hide Scrollbar */
+    }
+
+    .parallax::-webkit-scrollbar {
+        display: none;
+    }
+
+    .avatar {
+        background-color: #{$primary-black};
+        height: 50% !important;
+    }
+
+    .item {
+        margin-left: 19rem;
+        margin-top: 3rem;
+        z-index: 1;
+    }
+
+    .text {
+        position: absolute;
+        height: 50% !important;
+        top: 50%;
     }
 
     @include media-breakpoint-down(md) {

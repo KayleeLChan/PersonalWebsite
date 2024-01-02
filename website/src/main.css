@@ -14,8 +14,15 @@
   --bs-tertiary-bg-rgb: #713D54;
 }
 [data-bs-theme=custom] .main {
-  background-color: #251F22;
-  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 3rem 0;
+}
+[data-bs-theme=custom] p {
+  color: var(--bs-body-color);
+}
+[data-bs-theme=custom] footer {
+  z-index: 2;
 }
 [data-bs-theme=custom] .navbar {
   flex-wrap: nowrap !important;
@@ -53,7 +60,7 @@
   color: #94DD97;
 }
 [data-bs-theme=custom] #navbar-nav {
-  height: calc(100svh - 60px);
+  height: calc(100% - 60px);
   width: 100vw;
   top: 60px;
   background-color: #9F5E70;
@@ -67,6 +74,33 @@
 [data-bs-theme=custom] .slide-out {
   transform: translateY(-130%);
   transition: transform 0.3s ease-in-out;
+}
+[data-bs-theme=custom] .parallax {
+  height: calc(100% - 120px - 7rem) !important;
+  box-sizing: border-box;
+}
+[data-bs-theme=custom] .parallax * {
+  display: flex;
+  justify-content: center;
+  -ms-overflow-style: none; /* IE and Edge Hide Scrollbar */
+  scrollbar-width: none; /* Firefox Hide Scrollbar */
+}
+[data-bs-theme=custom] .parallax::-webkit-scrollbar {
+  display: none;
+}
+[data-bs-theme=custom] .avatar {
+  background-color: #251F22;
+  height: 50% !important;
+}
+[data-bs-theme=custom] .item {
+  margin-left: 19rem;
+  margin-top: 3rem;
+  z-index: 1;
+}
+[data-bs-theme=custom] .text {
+  position: absolute;
+  height: 50% !important;
+  top: 50%;
 }
 @media (max-width: 767.98px) {
   [data-bs-theme=custom] nav > .large-nav {
