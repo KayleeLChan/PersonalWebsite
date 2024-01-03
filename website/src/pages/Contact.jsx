@@ -5,7 +5,7 @@ function Contact() {
     return (
         <>
         <h1>
-            Hello world!
+            Contact Me:
         </h1>
         <i class="bi bi-backpack4-fill"></i>
         </>

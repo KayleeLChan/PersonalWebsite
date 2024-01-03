@@ -5,7 +5,7 @@ function Blog() {
     return (
         <>
         <h1>
-            Hello world!
+            Blog:
         </h1>
         <i class="bi bi-backpack4-fill"></i>
         </>

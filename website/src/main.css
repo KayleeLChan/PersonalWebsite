@@ -14,8 +14,15 @@
   --bs-tertiary-bg-rgb: #713D54;
 }
 [data-bs-theme=custom] .main {
-  background-color: #251F22;
-  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0 3rem 0;
+}
+[data-bs-theme=custom] p {
+  color: var(--bs-body-color);
+}
+[data-bs-theme=custom] footer {
+  z-index: 2;
 }
 [data-bs-theme=custom] .navbar {
   flex-wrap: nowrap !important;
@@ -53,7 +60,7 @@
   color: #94DD97;
 }
 [data-bs-theme=custom] #navbar-nav {
-  height: calc(100svh - 60px);
+  height: calc(100% - 60px);
   width: 100vw;
   top: 60px;
   background-color: #9F5E70;
@@ -67,6 +74,42 @@
 [data-bs-theme=custom] .slide-out {
   transform: translateY(-130%);
   transition: transform 0.3s ease-in-out;
+}
+[data-bs-theme=custom] .parallax {
+  height: calc(100% - 120px - 7rem) !important;
+  box-sizing: border-box;
+}
+[data-bs-theme=custom] .parallax * {
+  display: flex;
+  justify-content: center;
+  -ms-overflow-style: none; /* IE and Edge Hide Scrollbar */
+  scrollbar-width: none; /* Firefox Hide Scrollbar */
+}
+[data-bs-theme=custom] .parallax::-webkit-scrollbar {
+  display: none;
+}
+[data-bs-theme=custom] .avatar {
+  background-color: #251F22;
+  height: 50% !important;
+}
+[data-bs-theme=custom] .item {
+  margin-left: 19rem;
+  margin-top: 3rem;
+  z-index: 1;
+}
+[data-bs-theme=custom] .text {
+  position: absolute;
+  height: 50% !important;
+  top: 50%;
+}
+[data-bs-theme=custom] .explore-grid {
+  display: grid;
+  grid-template: repeat(2, minmax(150px, auto))/repeat(2, minmax(150px, auto));
+  grid-gap: 10px;
+  padding: 10px;
+}
+[data-bs-theme=custom] .explore-grid > div {
+  text-align: center;
 }
 @media (max-width: 767.98px) {
   [data-bs-theme=custom] nav > .large-nav {
@@ -2212,7 +2255,7 @@ progress {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-family: "Kumar One";
+  font-family: "Solway";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2369,7 +2412,7 @@ textarea.form-control-lg {
   display: block;
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
-  font-family: "Kumar One";
+  font-family: "Solway";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3036,7 +3079,7 @@ textarea.form-control-lg {
 .btn {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
-  --bs-btn-font-family: Kumar One;
+  --bs-btn-font-family: Solway;
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
