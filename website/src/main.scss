@@ -51,14 +51,14 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     }
 
     footer {
-        z-index: 2;
+        z-index: 4;
     }
 
     .navbar {
         flex-wrap: nowrap !important;
         position: sticky;
         top: 0;
-        z-index: 2;
+        z-index: 4;
     }
 
     .nav-link {
@@ -104,7 +104,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         top: 60px;
         background-color: #9F5E70;
         position: fixed;
-        z-index: 1;
+        z-index: 3;
     }
 
     .slide-in {
@@ -122,6 +122,10 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         box-sizing: border-box;
     }
 
+    .parallax p {
+        font-size: 1.5rem;
+    }
+
     .parallax * {
         display: flex;
         justify-content: center;
@@ -135,13 +139,12 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
 
     .avatar {
         background-color: #{$primary-black};
-        height: 50% !important;
+        height: 300px !important;
+        z-index: 1;
     }
 
     .item {
-        margin-left: 19rem;
-        margin-top: 3rem;
-        z-index: 1;
+        z-index: 2;
     }
 
     .text {
@@ -159,11 +162,23 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
 
     .explore-grid > div {
         text-align: center;
+        z-index: 2;
     }
 
     @include media-breakpoint-down(md) {
         nav > .large-nav {
             display: none !important;
+        }
+
+        .explore-grid {
+            display: grid;
+            grid-template: repeat(1, minmax(150px, auto)) / repeat(2, minmax(150px, auto));
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .explore-grid p {
+            font-size: 1rem !important;
         }
     }
 
