@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavPanel from './navpanel';
+import NavPanel from './navPanel';
 
 const Header = () => {
     const [showNavigation, setShowNavigation] = useState(false);

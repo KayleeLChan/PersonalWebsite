@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LandingParallax from '../components/landingparallax'
+import LandingParallax from '../components/landingParallax'
 
 function Home() {
     // Boolean for whether to show scroll prompt or not

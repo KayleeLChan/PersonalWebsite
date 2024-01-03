@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import ExploreGrid from '../components/exploregrid'
+import ExploreGrid from './exploreGrid'
 import Popup from './popup';
 
 const LandingParallax = ({ triggerBottom }) => {
@@ -69,8 +69,8 @@ const LandingParallax = ({ triggerBottom }) => {
                 {showPopup && (<Popup />)}
             </ParallaxLayer>
             <ParallaxLayer
-                offset={0.1}
-                sticky={{ start: 0.1, end: 1.5 }}
+                offset={0.5}
+                sticky={{ start: 0.5, end: 1.5 }}
                 className="item"
                 id="introduction"
                 ref={introduction}
@@ -82,8 +82,9 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 1, end: 2 }}
                 speed={2.3}
                 style={{ top: "310px" }}
+                className="text"
             >
-                <p className="p-3 text-center">Hello world! I’m Kaylee Chan, an aspiring game developer and avid programmer. Thanks for dropping by!</p>
+                <p className="p-3 text-center">Hello world! I’m Kaylee Chan, an aspiring game developer, web developer, and avid programmer. Thanks for dropping by!</p>
             </ParallaxLayer>
             <ParallaxLayer
                 offset={3}
@@ -99,6 +100,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 3.5, end: 5 }}
                 speed={2.3}
                 style={{ top: "310px" }}
+                className="text"
             >
                 <p className="p-3 text-center">I am currently a third year student at the University of Toronto, studying a specialist in Computer Science and certificate in business fundamentals.</p>
             </ParallaxLayer>
@@ -116,6 +118,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 6.5, end: 8 }}
                 speed={2.3}
                 style={{ top: "310px" }}
+                className="text"
             >
                 <p className="p-3 text-center">As someone who loves the fine arts, I like to be as creative as possible to make experiences people can enjoy and I can be proud of!</p>
             </ParallaxLayer>
@@ -133,8 +136,9 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 9.5, end: 11 }}
                 speed={2.3}
                 style={{ top: "310px" }}
+                className="text"
             >
-                <p className="p-3 text-center">Some examples are games I’ve worked on, such as Ascent and Seed You Later.</p>
+                <p className="p-3 text-center">Some examples are games I’ve worked on, such as <a href="https://tomas-ha.itch.io/ascent" target="_blank" rel="noopener noreferrer" aria-label="Ascent itch.io page (opens in new tab)">Ascent</a> and <a href="https://edwardhan.itch.io/seed-you-later" target="_blank" rel="noopener noreferrer" aria-label="Seed You Later itch.io page (opens in new tab)"> Seed You Later</a>, as well as websites, such as the one you're on right now!</p>
             </ParallaxLayer>
             <ParallaxLayer
                 offset={7}
@@ -150,8 +154,9 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 12.5, end: 14 }}
                 speed={2.3}
                 style={{ top: "310px" }}
+                className="text"
             >
-                <p className="p-3 text-center">I also take my creativity and problem-solving into my internships, like at Questrade.</p>
+                <p className="p-3 text-center">I also take my creativity and problem-solving into my internships, like at <a href="https://www.linkedin.com/pulse/intern-spotlight-kaylee-chan-web-developer-questrade/" target="_blank" rel="noopener noreferrer" aria-label="Questrade internship article (opens in new tab)">Questrade</a>.</p>
             </ParallaxLayer>
             <ParallaxLayer
                 offset={15.5}
@@ -172,7 +177,7 @@ const LandingParallax = ({ triggerBottom }) => {
             </ParallaxLayer>
             <ParallaxLayer
                 offset={17}
-                sticky={{start:16.9, end:18}}
+                sticky={{ start: 16.9, end: 18 }}
                 id="explore"
                 ref={explore}
             >

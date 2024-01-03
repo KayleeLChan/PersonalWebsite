@@ -9,8 +9,8 @@
   --bs-tertiary-bg: #94DD97;
   --bs-border-color: #FCF6F8;
   --bs-secondary-bg: #9F5E70;
-  --bs-link-color-rgb: #FCF6F8;
-  --bs-link-hover-color-rgb: #BB808A;
+  --bs-link-color-rgb: #94DD97;
+  --bs-link-hover-color-rgb: #E5FFE6;
   --bs-tertiary-bg-rgb: #713D54;
 }
 [data-bs-theme=custom] .main {
@@ -51,14 +51,14 @@
   color: #9F5E70 !important;
   background-color: #FCF6F8 !important;
 }
-[data-bs-theme=custom] .bi-backpack4-fill {
+[data-bs-theme=custom] .bi-backpack2-fill {
   line-height: 1;
   background-color: transparent;
   border: none;
   color: #FCF6F8;
 }
-[data-bs-theme=custom] .bi-backpack4-fill:active,
-[data-bs-theme=custom] .bi-backpack4-fill:focus {
+[data-bs-theme=custom] .bi-backpack2-fill:active,
+[data-bs-theme=custom] .bi-backpack2-fill:focus {
   color: #94DD97;
 }
 [data-bs-theme=custom] #navbar-nav {
@@ -82,6 +82,7 @@
   box-sizing: border-box;
 }
 [data-bs-theme=custom] .parallax p {
+  display: inline;
   font-size: 1.5rem;
   width: 50%;
 }
@@ -110,11 +111,17 @@
 }
 [data-bs-theme=custom] .item {
   z-index: 2;
+  max-height: 300px;
 }
-[data-bs-theme=custom] .text {
-  position: absolute;
-  height: 50% !important;
-  top: 50%;
+[data-bs-theme=custom] .text a, [data-bs-theme=custom] .text a:visited {
+  display: inline;
+  color: #94DD97;
+}
+[data-bs-theme=custom] .text a:hover {
+  color: #E5FFE6;
+}
+[data-bs-theme=custom] .text a:active {
+  color: #94DD97;
 }
 [data-bs-theme=custom] .explore-grid {
   display: grid;
@@ -125,9 +132,6 @@
 [data-bs-theme=custom] .explore-grid > div {
   text-align: center;
   z-index: 2;
-}
-[data-bs-theme=custom] .landing {
-  position: relative;
 }
 [data-bs-theme=custom] .fade-out {
   opacity: 0;
@@ -156,7 +160,7 @@
     display: none !important;
   }
   [data-bs-theme=custom] .parallax p {
-    font-size: 1.5rem;
+    font-size: 1rem;
     width: 100%;
   }
   [data-bs-theme=custom] .explore-grid {
@@ -165,12 +169,9 @@
     grid-gap: 10px;
     padding: 10px;
   }
-  [data-bs-theme=custom] .explore-grid p {
-    font-size: 1rem !important;
-  }
 }
 @media (min-width: 768px) {
-  [data-bs-theme=custom] nav > .bi-backpack4-fill {
+  [data-bs-theme=custom] nav > .bi-backpack2-fill {
     display: none !important;
   }
   [data-bs-theme=custom] #navbar-nav {
