@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import LandingParallax from '../components/landingparallax'
 
 function Home() {
+    // Boolean for whether to show scroll prompt or not
     const [atBottom, setAtBottom] = useState(false);
     const triggerBottom = () => {
-        console.log(atBottom);
         setAtBottom(true);
     };
 

@@ -88,15 +88,15 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         background-color: #{$primary-white} !important;
     }
 
-    .bi-backpack4-fill {
+    .bi-backpack2-fill {
         line-height: 1;
         background-color: transparent;
         border: none;
         color: #{$primary-white};
     }
 
-    .bi-backpack4-fill:active,
-    .bi-backpack4-fill:focus {
+    .bi-backpack2-fill:active,
+    .bi-backpack2-fill:focus {
         color: #{$primary-green};
     }
 
@@ -149,6 +149,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         z-index: 1;
     }
 
+    // Make avatar parallax layer absolute for level up popup to animate relative to top of head
     .avatar>div:first-child {
         position: absolute;
         top: 50%;
@@ -178,10 +179,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         z-index: 2;
     }
 
-    .landing {
-        position: relative;
-    }
-
+    // v Scroll Prompt Animations v
     .fade-out {
         opacity: 0;
         transition: opacity 0.15s ease-out;
@@ -213,6 +211,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         bottom: 60px;
         color: #{$light-pink};
     }
+    // ^ Scroll Prompt Animations ^
 
     @include media-breakpoint-down(md) {
         nav>.large-nav {
@@ -220,7 +219,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         }
 
         .parallax p {
-            font-size: 1.5rem;
+            font-size: 1rem;
             width: 100%;
         }
 
@@ -231,13 +230,13 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
             padding: 10px;
         }
 
-        .explore-grid p {
-            font-size: 1rem !important;
-        }
+        // .explore-grid p {
+        //     font-size: 1rem !important;
+        // }
     }
 
     @include media-breakpoint-up(md) {
-        nav>.bi-backpack4-fill {
+        nav>.bi-backpack2-fill {
             display: none !important;
         }
 
