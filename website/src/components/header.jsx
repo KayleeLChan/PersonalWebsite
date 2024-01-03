@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import NavPanel from './navpanel';
+import NavPanel from './navPanel';
 
 const Header = () => {
     const [showNavigation, setShowNavigation] = useState(false);
@@ -28,7 +28,7 @@ const Header = () => {
                 <Nav.Link href="/blog">Blog</Nav.Link>
                 <Nav.Link href="/contact">Contact Me</Nav.Link>
             </div>
-            <button aria-controls="navbar-nav" type="button" aria-label="Toggle navigation" className="bi bi-backpack4-fill fs-1 ms-auto mx-2" onClick={toggleNavigation}/>
+            <button aria-controls="navbar-nav" type="button" aria-label="Toggle navigation" className="bi bi-backpack2-fill fs-1 ms-auto mx-2" onClick={toggleNavigation}/>
         </Navbar>
         <NavPanel navClass={navClass} />
         </>
