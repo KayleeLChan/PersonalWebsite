@@ -36,7 +36,8 @@
 [data-bs-theme=custom] .nav-link:hover {
   color: #94DD97;
 }
-[data-bs-theme=custom] .nav-link:active, [data-bs-theme=custom] .nav-link:focus {
+[data-bs-theme=custom] .nav-link:active,
+[data-bs-theme=custom] .nav-link:focus {
   color: #FCF6F8;
 }
 [data-bs-theme=custom] .btn-outline-primary-white:focus {
@@ -56,7 +57,8 @@
   border: none;
   color: #FCF6F8;
 }
-[data-bs-theme=custom] .bi-backpack4-fill:active, [data-bs-theme=custom] .bi-backpack4-fill:focus {
+[data-bs-theme=custom] .bi-backpack4-fill:active,
+[data-bs-theme=custom] .bi-backpack4-fill:focus {
   color: #94DD97;
 }
 [data-bs-theme=custom] #navbar-nav {
@@ -81,20 +83,30 @@
 }
 [data-bs-theme=custom] .parallax p {
   font-size: 1.5rem;
+  width: 50%;
 }
 [data-bs-theme=custom] .parallax * {
   display: flex;
   justify-content: center;
-  -ms-overflow-style: none; /* IE and Edge Hide Scrollbar */
-  scrollbar-width: none; /* Firefox Hide Scrollbar */
+  -ms-overflow-style: none;
+  /* IE and Edge Hide Scrollbar */
+  scrollbar-width: none;
+  /* Firefox Hide Scrollbar */
 }
 [data-bs-theme=custom] .parallax::-webkit-scrollbar {
   display: none;
 }
 [data-bs-theme=custom] .avatar {
+  position: relative;
   background-color: #251F22;
   height: 300px !important;
   z-index: 1;
+}
+[data-bs-theme=custom] .avatar > div:first-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 [data-bs-theme=custom] .item {
   z-index: 2;
@@ -114,9 +126,38 @@
   text-align: center;
   z-index: 2;
 }
+[data-bs-theme=custom] .landing {
+  position: relative;
+}
+[data-bs-theme=custom] .fade-out {
+  opacity: 0;
+  transition: opacity 0.15s ease-out;
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+[data-bs-theme=custom] .bouncing-text {
+  display: inline-block;
+  animation: bounce 2s infinite;
+  position: absolute;
+  bottom: 60px;
+  color: #D59697;
+}
 @media (max-width: 767.98px) {
   [data-bs-theme=custom] nav > .large-nav {
     display: none !important;
+  }
+  [data-bs-theme=custom] .parallax p {
+    font-size: 1.5rem;
+    width: 100%;
   }
   [data-bs-theme=custom] .explore-grid {
     display: grid;
