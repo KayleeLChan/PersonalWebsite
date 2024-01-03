@@ -150,6 +150,17 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         top: 50%;
     }
 
+    .explore-grid {
+        display: grid;
+        grid-template: repeat(2, minmax(150px, auto)) / repeat(2, minmax(150px, auto));
+        grid-gap: 10px;
+        padding: 10px;
+    }
+
+    .explore-grid > div {
+        text-align: center;
+    }
+
     @include media-breakpoint-down(md) {
         nav > .large-nav {
             display: none !important;
@@ -172,7 +183,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
 
 $font-family-sans-serif: "Solway";
 $headings-font-family: "Kumar One";
-$input-btn-font-family: "Kumar One";
+$input-btn-font-family: "Solway";
 $form-text-font-style: "Kumar One";
 
 // import bootstrap

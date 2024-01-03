@@ -102,6 +102,15 @@
   height: 50% !important;
   top: 50%;
 }
+[data-bs-theme=custom] .explore-grid {
+  display: grid;
+  grid-template: repeat(2, minmax(150px, auto))/repeat(2, minmax(150px, auto));
+  grid-gap: 10px;
+  padding: 10px;
+}
+[data-bs-theme=custom] .explore-grid > div {
+  text-align: center;
+}
 @media (max-width: 767.98px) {
   [data-bs-theme=custom] nav > .large-nav {
     display: none !important;
@@ -2246,7 +2255,7 @@ progress {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
-  font-family: "Kumar One";
+  font-family: "Solway";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -2403,7 +2412,7 @@ textarea.form-control-lg {
   display: block;
   width: 100%;
   padding: 0.375rem 2.25rem 0.375rem 0.75rem;
-  font-family: "Kumar One";
+  font-family: "Solway";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -3070,7 +3079,7 @@ textarea.form-control-lg {
 .btn {
   --bs-btn-padding-x: 0.75rem;
   --bs-btn-padding-y: 0.375rem;
-  --bs-btn-font-family: Kumar One;
+  --bs-btn-font-family: Solway;
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 1.5;
