@@ -74,7 +74,7 @@ const LandingParallax = ({triggerBottom}) => {
                 sticky={{ start: 3, end: 4.5 }}
                 className="item"
             >
-                <img src="/UofT.svg" width="300" height="300" alt="University of Toronto logo" ref={firstRef} />
+                <img src="/UofT.svg" width="300" height="300" alt="University of Toronto logo" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={3.5}
@@ -89,7 +89,7 @@ const LandingParallax = ({triggerBottom}) => {
                 sticky={{ start: 6, end: 7.5 }}
                 className="item"
             >
-                <img src="/Art.svg" width="300" height="300" alt="Paint palette" ref={secondRef} />
+                <img src="/Art.svg" width="300" height="300" alt="Paint palette" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={6.5}
@@ -104,7 +104,7 @@ const LandingParallax = ({triggerBottom}) => {
                 sticky={{ start: 9, end: 10.5 }}
                 className="item"
             >
-                <img src="/Game.svg" width="300" height="300" alt="Game element from Ascent and Seed You Later" ref={thirdRef} />
+                <img src="/Game.svg" width="300" height="300" alt="Game element from Ascent and Seed You Later" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={9.5}
@@ -119,7 +119,7 @@ const LandingParallax = ({triggerBottom}) => {
                 sticky={{ start: 12, end: 13.5 }}
                 className="item"
             >
-                <img src="/Questrade.svg" width="300" height="300" alt="Questrade logo" ref={fourthRef} />
+                <img src="/Questrade.svg" width="300" height="300" alt="Questrade logo" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={12.5}
@@ -134,7 +134,7 @@ const LandingParallax = ({triggerBottom}) => {
                 sticky={{ start: 15.5, end: 16 }}
             >
                 <div className="d-flex flex-column justify-content-center align-items-center p-3">
-                    <img src="/Smile.svg" width="300" height="300" alt="Kaylee Chan pixel avatar smiling" ref={fifthRef} />
+                    <img src="/Smile.svg" width="300" height="300" alt="Kaylee Chan pixel avatar smiling" />
                     <h2 className="mt-5 fs-3">Thank you for visting!</h2>
                 </div>
             </ParallaxLayer>
