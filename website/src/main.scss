@@ -292,8 +292,18 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         margin-right: 0.5rem;
     }
 
+    .subpage img {
+        height: 300px;
+        width: 300px;
+    }
+
     .h-flip {
         transform: scaleX(-1);
+    }
+
+    .contact-text {
+        font-size: 1.25rem;
+        margin-bottom: 0;
     }
 
     @include media-breakpoint-down(md) {
@@ -323,6 +333,19 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     
         .swiper-slide p {
             font-size: 0.5rem;
+        }
+
+        .contact-text {
+            font-size: 1rem;
+        }
+
+        .subpage h1 {
+            font-size: 1rem;
+        }
+
+        .subpage img {
+            height: 100px;
+            width: 100px;
         }
     }
 

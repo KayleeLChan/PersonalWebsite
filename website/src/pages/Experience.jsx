@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 
 function Experience() {
     const workEntries = [
-        // { title: "Konrad (Incoming)", start: "May 2024", end: "August 2024", content: "Incoming software engineer intern at Konrad" },
+        { title: "Konrad (Incoming)", start: "May 2024", end: "August 2024", content: "Incoming software engineer intern at Konrad" },
         { title: "Questrade", start: "May 2023", end: "August 2023", content: "Interned as a web developer at Questrade" },
         { title: "Downtown Surrey Business Improvement Association", start: "May 2022", end: "August 2022", content: "Interned as a web designer for local businesses" },
     ]
@@ -18,7 +18,7 @@ function Experience() {
     const gameEntries = [
         { title: "Ascent", start: "September 2023", end: "December 2023", content: "An enjoyable \"make-or-break\" relationships 3D, 2-Player, Co-Operative Platformer experience (University of Toronto CSC404 Project)", link: "https://tomas-ha.itch.io/ascent" },
         { title: "Seed You Later", start: "November 2022", content: "A short, cozy, and fun 2D pixel game full of charm and minigames! 3rd place winner of the University of Toronto's Game Design and Development Club's Fall 2022 Game Jam", link: "https://edwardhan.itch.io/seed-you-later" },
-        { title: "Ascent", start: "November 2022", content: "Humorous and short 3D puzzle game for the University of Toronto's Game Design and Development Club's Fall 2021 Game Jam", link: "https://kayleelchan.itch.io/moons-side" },
+        { title: "Moon's Side", start: "November 2022", content: "Humorous and short 3D puzzle game for the University of Toronto's Game Design and Development Club's Fall 2021 Game Jam", link: "https://kayleelchan.itch.io/moons-side" },
     ]
 
     return (

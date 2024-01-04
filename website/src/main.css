@@ -211,8 +211,16 @@
   vertical-align: top;
   margin-right: 0.5rem;
 }
+[data-bs-theme=custom] .subpage img {
+  height: 300px;
+  width: 300px;
+}
 [data-bs-theme=custom] .h-flip {
   transform: scaleX(-1);
+}
+[data-bs-theme=custom] .contact-text {
+  font-size: 1.25rem;
+  margin-bottom: 0;
 }
 @media (max-width: 767.98px) {
   [data-bs-theme=custom] nav > .large-nav {
@@ -236,6 +244,16 @@
   }
   [data-bs-theme=custom] .swiper-slide p {
     font-size: 0.5rem;
+  }
+  [data-bs-theme=custom] .contact-text {
+    font-size: 1rem;
+  }
+  [data-bs-theme=custom] .subpage h1, [data-bs-theme=custom] .subpage .h1 {
+    font-size: 1rem;
+  }
+  [data-bs-theme=custom] .subpage img {
+    height: 100px;
+    width: 100px;
   }
 }
 @media (min-width: 768px) {
