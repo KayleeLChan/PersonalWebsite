@@ -22,7 +22,7 @@ function Experience() {
     ]
 
     return (
-        <div className="experience">
+        <div className="subpage">
             <h1 className="fs-4 text-light-pink" id="work">Work Experience</h1>
             <CardCarousel entries={workEntries} />
             <Button variant="outline-light-pink" className="mt-3" href="resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Kaylee Chan's resume (opens in new tab)">

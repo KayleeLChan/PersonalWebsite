@@ -278,7 +278,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         opacity: 90%;
     }
 
-    .experience {
+    .subpage {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -287,9 +287,13 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         width: 100%;
     }
 
-    .experience svg {
+    .subpage svg {
         vertical-align: top;
         margin-right: 0.5rem;
+    }
+
+    .h-flip {
+        transform: scaleX(-1);
     }
 
     @include media-breakpoint-down(md) {

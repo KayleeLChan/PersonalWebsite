@@ -64,7 +64,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 className="avatar bg-primary-black"
             >
                 <div>
-                    <img src="/Avatar.svg" width="300" height="300" alt="Kaylee Chan pixel avatar" />
+                    <img src="Avatar.svg" width="300" height="300" alt="Kaylee Chan pixel avatar" />
                 </div>
                 {showPopup && (<Popup />)}
             </ParallaxLayer>
@@ -76,7 +76,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="introduction"
                 ref={introduction}
             >
-                <img src="/Binary.svg" width="300" height="300" alt="Binary code" />
+                <img src="Binary.svg" width="300" height="300" alt="Binary code" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={1}
@@ -95,7 +95,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="education"
                 ref={education}
             >
-                <img src="/UofT.svg" width="300" height="300" alt="University of Toronto logo" />
+                <img src="UofT.svg" width="300" height="300" alt="University of Toronto logo" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={3.5}
@@ -114,7 +114,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="interests"
                 ref={interests}
             >
-                <img src="/Art.svg" width="300" height="300" alt="Paint palette" />
+                <img src="Art.svg" width="300" height="300" alt="Paint palette" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={6.5}
@@ -133,7 +133,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="games"
                 ref={games}
             >
-                <img src="/Game.svg" width="300" height="300" alt="Game element from Ascent and Seed You Later" />
+                <img src="Game.svg" width="300" height="300" alt="Game element from Ascent and Seed You Later" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={9.5}
@@ -152,7 +152,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="work"
                 ref={work}
             >
-                <img src="/Questrade.svg" width="300" height="300" alt="Questrade logo" />
+                <img src="Questrade.svg" width="300" height="300" alt="Questrade logo" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={12.5}
@@ -169,7 +169,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="thanks"
             >
                 <div className="d-flex flex-column justify-content-center align-items-center p-3">
-                    <img src="/Smile.svg" width="300" height="300" alt="Kaylee Chan pixel avatar smiling" />
+                    <img src="Smile.svg" width="300" height="300" alt="Kaylee Chan pixel avatar smiling" />
                     <h2 className="mt-5 fs-3">Thank you for visting!</h2>
                 </div>
             </ParallaxLayer>
