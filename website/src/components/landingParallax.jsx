@@ -71,7 +71,7 @@ const LandingParallax = ({ triggerBottom }) => {
             <ParallaxLayer
                 offset={0.5}
                 sticky={{ start: 0.5, end: 1.5 }}
-                speed={0.7}
+                speed={1.7}
                 className="item"
                 id="introduction"
                 ref={introduction}
@@ -80,7 +80,7 @@ const LandingParallax = ({ triggerBottom }) => {
             </ParallaxLayer>
             <ParallaxLayer
                 offset={1}
-                sticky={{ start: 1, end: 2 }}
+                sticky={{ start: 1, end: 1.7 }}
                 speed={2.3}
                 style={{ top: "310px" }}
                 className="text"
@@ -90,7 +90,7 @@ const LandingParallax = ({ triggerBottom }) => {
             <ParallaxLayer
                 offset={3}
                 sticky={{ start: 3, end: 4.5 }}
-                speed={0.7}
+                speed={1.7}
                 className="item"
                 id="education"
                 ref={education}
@@ -99,7 +99,7 @@ const LandingParallax = ({ triggerBottom }) => {
             </ParallaxLayer>
             <ParallaxLayer
                 offset={3.5}
-                sticky={{ start: 3.5, end: 5 }}
+                sticky={{ start: 3.5, end: 4.2 }}
                 speed={2.3}
                 style={{ top: "310px" }}
                 className="text"
@@ -109,7 +109,7 @@ const LandingParallax = ({ triggerBottom }) => {
             <ParallaxLayer
                 offset={5.5}
                 sticky={{ start: 6, end: 7.5 }}
-                speed={0.7}
+                speed={1.7}
                 className="item"
                 id="interests"
                 ref={interests}
@@ -118,7 +118,7 @@ const LandingParallax = ({ triggerBottom }) => {
             </ParallaxLayer>
             <ParallaxLayer
                 offset={6.5}
-                sticky={{ start: 6.5, end: 8 }}
+                sticky={{ start: 6.5, end: 7.2 }}
                 speed={2.3}
                 style={{ top: "310px" }}
                 className="text"
@@ -128,7 +128,7 @@ const LandingParallax = ({ triggerBottom }) => {
             <ParallaxLayer
                 offset={8.3}
                 sticky={{ start: 9, end: 10.5 }}
-                speed={0.7}
+                speed={1.7}
                 className="item"
                 id="games"
                 ref={games}
@@ -137,7 +137,7 @@ const LandingParallax = ({ triggerBottom }) => {
             </ParallaxLayer>
             <ParallaxLayer
                 offset={9.5}
-                sticky={{ start: 9.5, end: 11 }}
+                sticky={{ start: 9.5, end: 10.2 }}
                 speed={2.3}
                 style={{ top: "310px" }}
                 className="text"
@@ -147,7 +147,7 @@ const LandingParallax = ({ triggerBottom }) => {
             <ParallaxLayer
                 offset={7}
                 sticky={{ start: 12, end: 13.5 }}
-                speed={0.7}
+                speed={1.7}
                 className="item"
                 id="work"
                 ref={work}
@@ -156,7 +156,7 @@ const LandingParallax = ({ triggerBottom }) => {
             </ParallaxLayer>
             <ParallaxLayer
                 offset={12.5}
-                sticky={{ start: 12.5, end: 14 }}
+                sticky={{ start: 12.5, end: 13.2 }}
                 speed={2.3}
                 style={{ top: "310px" }}
                 className="text"
