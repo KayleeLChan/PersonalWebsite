@@ -54,7 +54,7 @@ const LandingParallax = ({ triggerBottom }) => {
         return () => {
             container.removeEventListener('scroll', handleScroll)
         }
-    }, [])
+    })
 
     return (
         <Parallax pages={18} className="parallax">
