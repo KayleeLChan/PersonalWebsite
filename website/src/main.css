@@ -113,7 +113,8 @@
   z-index: 2;
   max-height: 300px;
 }
-[data-bs-theme=custom] .text a, [data-bs-theme=custom] .text a:visited {
+[data-bs-theme=custom] .text a,
+[data-bs-theme=custom] .text a:visited {
   display: inline;
   color: #94DD97;
 }
@@ -155,6 +156,58 @@
   bottom: 60px;
   color: #D59697;
 }
+[data-bs-theme=custom] .swiper {
+  width: 100%;
+  height: 100%;
+}
+[data-bs-theme=custom] .swiper-wrapper {
+  max-height: 50svh;
+}
+[data-bs-theme=custom] .swiper-slide {
+  text-align: center;
+  font-size: 1.5rem;
+  background: #9F5E70;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.3rem;
+}
+[data-bs-theme=custom] .swiper-slide h2, [data-bs-theme=custom] .swiper-slide .h2 {
+  font-size: 1.5rem;
+}
+[data-bs-theme=custom] .swiper-slide h3, [data-bs-theme=custom] .swiper-slide .h3 {
+  font-size: 1rem;
+}
+[data-bs-theme=custom] .swiper-slide p {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+[data-bs-theme=custom] .swiper-pagination-bullet {
+  background: #94DD97 !important;
+}
+[data-bs-theme=custom] .card-carousel {
+  height: 50%;
+  width: 50%;
+}
+[data-bs-theme=custom] .clickable-slide:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+[data-bs-theme=custom] .clickable-slide:active {
+  opacity: 90%;
+}
+[data-bs-theme=custom] .experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+[data-bs-theme=custom] .experience svg {
+  vertical-align: top;
+  margin-right: 0.5rem;
+}
 @media (max-width: 767.98px) {
   [data-bs-theme=custom] nav > .large-nav {
     display: none !important;
@@ -168,6 +221,15 @@
     grid-template: repeat(1, minmax(150px, auto))/repeat(2, minmax(150px, auto));
     grid-gap: 10px;
     padding: 10px;
+  }
+  [data-bs-theme=custom] .swiper-slide h2, [data-bs-theme=custom] .swiper-slide .h2 {
+    font-size: 1rem;
+  }
+  [data-bs-theme=custom] .swiper-slide h3, [data-bs-theme=custom] .swiper-slide .h3 {
+    font-size: 0.5rem;
+  }
+  [data-bs-theme=custom] .swiper-slide p {
+    font-size: 0.5rem;
   }
 }
 @media (min-width: 768px) {

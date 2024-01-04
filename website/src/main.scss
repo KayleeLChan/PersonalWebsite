@@ -163,7 +163,8 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         max-height: 300px;
     }
 
-    .text a, .text a:visited {
+    .text a,
+    .text a:visited {
         display: inline;
         color: #{$primary-green};
     }
@@ -220,7 +221,72 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         bottom: 60px;
         color: #{$light-pink};
     }
+
     // ^ Scroll Prompt Animations ^
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-wrapper {
+        max-height: 50svh;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 1.5rem;
+        background: #{$medium-pink};
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.3rem;
+    }
+
+    .swiper-slide h2 {
+        font-size: 1.5rem;
+    }
+
+    .swiper-slide h3 {
+        font-size: 1rem;
+    }
+
+    .swiper-slide p {
+        font-size: 1rem;
+        margin-bottom: 0;
+    }
+
+    .swiper-pagination-bullet {
+        background: #{$primary-green} !important;
+    }
+
+    .card-carousel {
+        height: 50%;
+        width: 50%;
+    }
+
+    .clickable-slide:hover {
+        cursor: pointer;
+        opacity: 70%;
+    }
+
+    .clickable-slide:active {
+        opacity: 90%;
+    }
+
+    .experience {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+
+    .experience svg {
+        vertical-align: top;
+        margin-right: 0.5rem;
+    }
 
     @include media-breakpoint-down(md) {
         nav>.large-nav {
@@ -237,6 +303,18 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
             grid-template: repeat(1, minmax(150px, auto)) / repeat(2, minmax(150px, auto));
             grid-gap: 10px;
             padding: 10px;
+        }
+
+        .swiper-slide h2 {
+            font-size: 1rem;
+        }
+    
+        .swiper-slide h3 {
+            font-size: 0.5rem;
+        }
+    
+        .swiper-slide p {
+            font-size: 0.5rem;
         }
     }
 
