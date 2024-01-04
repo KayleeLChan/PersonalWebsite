@@ -24,8 +24,8 @@ const Header = () => {
             </Navbar.Brand>
             <div className="ms-3 d-flex flex-row gap-3 large-nav">
                 <Nav.Link href="/experience">Experience</Nav.Link>
-                <Nav.Link href="/about-me">About Me</Nav.Link>
-                <Nav.Link href="/blog">Blog</Nav.Link>
+                {/* <Nav.Link href="/about-me">About Me</Nav.Link>
+                <Nav.Link href="/blog">Blog</Nav.Link> */}
                 <Nav.Link href="/contact">Contact Me</Nav.Link>
             </div>
             <button aria-controls="navbar-nav" type="button" aria-label="Toggle navigation" className="bi bi-backpack2-fill fs-1 ms-auto mx-2" onClick={toggleNavigation}/>

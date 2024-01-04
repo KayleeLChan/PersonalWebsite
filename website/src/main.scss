@@ -179,7 +179,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
 
     .explore-grid {
         display: grid;
-        grid-template: repeat(2, minmax(150px, auto)) / repeat(2, minmax(150px, auto));
+        grid-template: repeat(1, minmax(150px, auto)) / repeat(2, minmax(150px, auto));
         grid-gap: 10px;
         padding: 10px;
     }
@@ -187,6 +187,10 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     .explore-grid>div {
         text-align: center;
         z-index: 2;
+    }
+
+    .explore-grid p {
+        width: 75%;
     }
 
     // v Scroll Prompt Animations v
