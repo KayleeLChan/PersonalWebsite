@@ -61,10 +61,10 @@ const LandingParallax = ({ triggerBottom }) => {
             <ParallaxLayer
                 offset={0}
                 sticky={{ start: 0, end: 14.5 }}
-                className="avatar bg-primary-black"
+                className="avatar"
             >
                 <div>
-                    <img src="Avatar.svg" width="300" height="300" alt="Kaylee Chan pixel avatar" />
+                    <img src="Avatar.svg" alt="Kaylee Chan pixel avatar" />
                 </div>
                 {showPopup && (<Popup />)}
             </ParallaxLayer>
@@ -76,16 +76,15 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="introduction"
                 ref={introduction}
             >
-                <img src="Binary.svg" width="300" height="300" alt="Binary code" />
+                <img src="Binary.svg" alt="Binary code" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={1}
                 sticky={{ start: 1, end: 1.7 }}
                 speed={2.3}
-                style={{ top: "310px" }}
                 className="text"
             >
-                <p className="p-3 text-center">Hello world! I’m Kaylee Chan, an aspiring game developer, web developer, and avid programmer. Thanks for dropping by!</p>
+                <p className="text-center">Hello world! I’m Kaylee Chan, an aspiring game developer, web developer, and avid programmer. Thanks for dropping by!</p>
             </ParallaxLayer>
             <ParallaxLayer
                 offset={3}
@@ -95,16 +94,15 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="education"
                 ref={education}
             >
-                <img src="UofT.svg" width="300" height="300" alt="University of Toronto logo" />
+                <img src="UofT.svg" alt="University of Toronto logo" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={3.5}
                 sticky={{ start: 3.5, end: 4.2 }}
                 speed={2.3}
-                style={{ top: "310px" }}
                 className="text"
             >
-                <p className="p-3 text-center">I am currently a third year student at the University of Toronto, studying a specialist in Computer Science with a focus in AI and Game Design, as well as a certificate in Business Fundamentals.</p>
+                <p className="text-center">I am currently a third year student at the University of Toronto, studying a specialist in Computer Science with a focus in AI and Game Design, as well as a certificate in Business Fundamentals.</p>
             </ParallaxLayer>
             <ParallaxLayer
                 offset={5.5}
@@ -114,16 +112,15 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="interests"
                 ref={interests}
             >
-                <img src="Art.svg" width="300" height="300" alt="Paint palette" />
+                <img src="Art.svg" alt="Paint palette" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={6.5}
                 sticky={{ start: 6.5, end: 7.2 }}
                 speed={2.3}
-                style={{ top: "310px" }}
                 className="text"
             >
-                <p className="p-3 text-center">As someone who loves the fine arts, I like to be as creative as possible to make experiences people can enjoy and I can be proud of!</p>
+                <p className="text-center">As someone who loves the fine arts, I like to be as creative as possible to make experiences people can enjoy and I can be proud of!</p>
             </ParallaxLayer>
             <ParallaxLayer
                 offset={8.3}
@@ -133,16 +130,15 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="games"
                 ref={games}
             >
-                <img src="Game.svg" width="300" height="300" alt="Game element from Ascent and Seed You Later" />
+                <img src="Game.svg" alt="Game element from Ascent and Seed You Later" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={9.5}
                 sticky={{ start: 9.5, end: 10.2 }}
                 speed={2.3}
-                style={{ top: "310px" }}
                 className="text"
             >
-                <p className="p-3 text-center">Some examples are games I’ve worked on, such as <a href="https://tomas-ha.itch.io/ascent" target="_blank" rel="noopener noreferrer" aria-label="Ascent itch.io page (opens in new tab)">Ascent</a> and <a href="https://edwardhan.itch.io/seed-you-later" target="_blank" rel="noopener noreferrer" aria-label="Seed You Later itch.io page (opens in new tab)"> Seed You Later</a>, as well as websites, such as the one you're on right now!</p>
+                <p className="text-center">Some examples are games I’ve worked on, such as <a href="https://tomas-ha.itch.io/ascent" target="_blank" rel="noopener noreferrer" aria-label="Ascent itch.io page (opens in new tab)">Ascent</a> and <a href="https://edwardhan.itch.io/seed-you-later" target="_blank" rel="noopener noreferrer" aria-label="Seed You Later itch.io page (opens in new tab)"> Seed You Later</a>, as well as websites, such as the one you're on right now!</p>
             </ParallaxLayer>
             <ParallaxLayer
                 offset={7}
@@ -152,16 +148,15 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="work"
                 ref={work}
             >
-                <img src="Questrade.svg" width="300" height="300" alt="Questrade logo" />
+                <img src="Questrade.svg" alt="Questrade logo" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={12.5}
                 sticky={{ start: 12.5, end: 13.2 }}
                 speed={2.3}
-                style={{ top: "310px" }}
                 className="text"
             >
-                <p className="p-3 text-center">I also take my creativity and problem-solving into my internships, like at <a href="https://www.linkedin.com/pulse/intern-spotlight-kaylee-chan-web-developer-questrade/" target="_blank" rel="noopener noreferrer" aria-label="Questrade internship article (opens in new tab)">Questrade</a>.</p>
+                <p className="text-center">I also take my creativity and problem-solving into my internships, like at <a href="https://www.linkedin.com/pulse/intern-spotlight-kaylee-chan-web-developer-questrade/" target="_blank" rel="noopener noreferrer" aria-label="Questrade internship article (opens in new tab)">Questrade</a>.</p>
             </ParallaxLayer>
             <ParallaxLayer
                 offset={15.5}
@@ -169,7 +164,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="thanks"
             >
                 <div className="d-flex flex-column justify-content-center align-items-center p-3">
-                    <img src="Smile.svg" width="300" height="300" alt="Kaylee Chan pixel avatar smiling" />
+                    <img src="Smile.svg" alt="Kaylee Chan pixel avatar smiling" />
                     <h2 className="mt-5 fs-3">Thank you for visting!</h2>
                 </div>
             </ParallaxLayer>

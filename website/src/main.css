@@ -81,10 +81,17 @@
   height: calc(100% - 120px - 7rem) !important;
   box-sizing: border-box;
 }
+[data-bs-theme=custom] .parallax img {
+  aspect-ratio: 1/1;
+  height: 40vh;
+}
 [data-bs-theme=custom] .parallax p {
   display: inline;
   font-size: 1.5rem;
   width: 50%;
+}
+[data-bs-theme=custom] .parallax .text {
+  padding: 1rem;
 }
 [data-bs-theme=custom] .parallax * {
   display: flex;
@@ -100,7 +107,7 @@
 [data-bs-theme=custom] .avatar {
   position: relative;
   background-color: #251F22;
-  height: 300px !important;
+  height: max(40vh, 50%) !important;
   z-index: 1;
 }
 [data-bs-theme=custom] .avatar > div:first-child {
@@ -109,9 +116,20 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+[data-bs-theme=custom] .popup {
+  z-index: 2;
+  height: max(40vh, 50%);
+  display: flex;
+  justify-content: center;
+}
 [data-bs-theme=custom] .item {
   z-index: 2;
-  max-height: 300px;
+  max-height: max(40vh, 50%);
+  display: flex;
+  align-items: center;
+}
+[data-bs-theme=custom] .text {
+  top: max(40vh + 10px, (100svh - 120px - 7rem) / 2 + 10px) !important;
 }
 [data-bs-theme=custom] .text a,
 [data-bs-theme=custom] .text a:visited {
@@ -262,6 +280,35 @@
   }
   [data-bs-theme=custom] #navbar-nav {
     display: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  [data-bs-theme=custom] .avatar, [data-bs-theme=custom] .popup, [data-bs-theme=custom] .item {
+    height: 100% !important;
+  }
+  [data-bs-theme=custom] .avatar {
+    background-color: transparent !important;
+  }
+  [data-bs-theme=custom] .avatar > div:first-child {
+    position: absolute;
+    top: 25% !important;
+    left: 25% !important;
+    transform: translate(0, 0) !important;
+  }
+  [data-bs-theme=custom] .item > img {
+    position: absolute !important;
+    top: 50% !important;
+    left: 25% !important;
+  }
+  [data-bs-theme=custom] .popup {
+    position: absolute;
+    top: 25%;
+    left: 33%;
+  }
+  [data-bs-theme=custom] .parallax > .text {
+    justify-content: end !important;
+    padding: 0 5rem;
+    top: 50% !important;
   }
 }
 

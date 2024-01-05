@@ -14,7 +14,7 @@ const Popup = () => {
   });
 
   return (
-    <animated.div style={springProps} className="item">
+    <animated.div style={springProps} className="popup">
       <h5>Level up!</h5>
     </animated.div>
   );
