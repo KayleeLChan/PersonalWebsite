@@ -384,6 +384,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     // Change landing parallax to be side by side on xl and up screens
     @include media-breakpoint-up(xl) {
         .avatar, .popup, .item {
+            max-height: 100% !important;
             height: 100% !important;
         }
 
@@ -401,7 +402,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
 
         .item > img {
             position: absolute !important;
-            top: 50% !important;
+            top: 25% !important;
             left: 25% !important;
         }
 
@@ -415,7 +416,12 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         .parallax > .text {
             justify-content: end !important;
             padding: 0 5rem;
-            top: 50% !important;
+            top: 0% !important;
+        }
+
+        .text p {
+            position: absolute;
+            top: 50%;
         }
     }
 }

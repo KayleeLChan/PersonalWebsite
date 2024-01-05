@@ -284,6 +284,7 @@
 }
 @media (min-width: 1200px) {
   [data-bs-theme=custom] .avatar, [data-bs-theme=custom] .popup, [data-bs-theme=custom] .item {
+    max-height: 100% !important;
     height: 100% !important;
   }
   [data-bs-theme=custom] .avatar {
@@ -297,7 +298,7 @@
   }
   [data-bs-theme=custom] .item > img {
     position: absolute !important;
-    top: 50% !important;
+    top: 25% !important;
     left: 25% !important;
   }
   [data-bs-theme=custom] .popup {
@@ -308,7 +309,11 @@
   [data-bs-theme=custom] .parallax > .text {
     justify-content: end !important;
     padding: 0 5rem;
-    top: 50% !important;
+    top: 0% !important;
+  }
+  [data-bs-theme=custom] .text p {
+    position: absolute;
+    top: 50%;
   }
 }
 

@@ -66,7 +66,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 <div>
                     <img src="Avatar.svg" alt="Kaylee Chan pixel avatar" />
                 </div>
-                {showPopup && (<Popup />)}
+                <Popup showPopup={showPopup} setShowPopup={setShowPopup} />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={0.5}

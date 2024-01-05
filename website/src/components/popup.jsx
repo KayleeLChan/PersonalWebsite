@@ -1,16 +1,21 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
 
-const Popup = () => {
+const Popup = ({ showPopup, setShowPopup }) => {
   // Define the animation properties
   const springProps = useSpring({
+    opacity: showPopup ? 1 : 0,
+    translateY: showPopup ? 0 : 10,
     from: { opacity: 0, translateY: 10 },
     to: async (next) => {
-      await next({ opacity: 1, translateY: 0 });
-      await next({ opacity: 0, translateY: 10 });
+      if (showPopup) {
+        await next({ opacity: 1, translateY: 0 });
+        await next({ opacity: 0, translateY: 10 });
+        setShowPopup(false);
+      }
     },
     config: { tension: 500, friction: 30 },
-    delay: 1500
+    delay: 1500,
   });
 
   return (
