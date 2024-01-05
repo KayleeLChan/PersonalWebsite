@@ -415,13 +415,13 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         // Text layers should be justified to the right
         .parallax > .text {
             justify-content: end !important;
-            padding: 0 5rem;
             top: 0% !important;
         }
 
         .text p {
             position: absolute;
-            top: 50%;
+            top: 45%;
+            padding: 0 5rem 0 5rem;
         }
     }
 }

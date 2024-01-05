@@ -308,12 +308,12 @@
   }
   [data-bs-theme=custom] .parallax > .text {
     justify-content: end !important;
-    padding: 0 5rem;
     top: 0% !important;
   }
   [data-bs-theme=custom] .text p {
     position: absolute;
-    top: 50%;
+    top: 45%;
+    padding: 0 5rem 0 5rem;
   }
 }
 
