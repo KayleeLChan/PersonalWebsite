@@ -11,7 +11,7 @@ const Header = () => {
     
     return (
         <>
-        <Navbar className="px-3 bg-dark-pink">
+        <Navbar className="px-3 bg-dark-pink shadow">
             <Navbar.Brand href="/" className="fs-3 btn-cream mb-0 mx-2 navbar-brand d-flex flex-row align-items-center nav-link">
                 <img
                     src="LightLogo.svg"
