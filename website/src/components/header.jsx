@@ -11,7 +11,7 @@ const Header = () => {
     
     return (
         <>
-        <Navbar className="px-3 bg-dark-pink shadow">
+        <Navbar className="px-3 bg-transparent">
             <Navbar.Brand href="/" className="fs-3 btn-cream mb-0 mx-2 navbar-brand d-flex flex-row align-items-center nav-link">
                 <img
                     src="LightLogo.svg"
@@ -23,10 +23,10 @@ const Header = () => {
                 Kaylee Chan
             </Navbar.Brand>
             <div className="ms-3 d-flex flex-row gap-3 large-nav">
-                <Nav.Link href="/experience">Experience</Nav.Link>
+                <Nav.Link href="/experience" className="fs-5">Experience</Nav.Link>
                 {/* <Nav.Link href="/about-me">About Me</Nav.Link>
                 <Nav.Link href="/blog">Blog</Nav.Link> */}
-                <Nav.Link href="/contact">Contact Me</Nav.Link>
+                <Nav.Link href="/contact" className="fs-5">Contact Me</Nav.Link>
             </div>
             <button aria-controls="navbar-nav" type="button" aria-label="Toggle navigation" className="bi bi-backpack2-fill fs-1 ms-auto mx-2" onClick={toggleNavigation}/>
         </Navbar>

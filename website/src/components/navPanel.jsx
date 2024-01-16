@@ -4,6 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 const NavPanel = ({navClass}) => {
   return (
     <div id="navbar-nav" className={`d-flex flex-column p-3 gap-3 fs-5 ${navClass}`}>
+        <h2 className='mb-0 mt-3'>Inventory</h2>
         <Nav.Link href="/experience">Experience</Nav.Link>
         {/* <Nav.Link href="/about-me">About Me</Nav.Link>
         <Nav.Link href="/blog">Blog</Nav.Link> */}
