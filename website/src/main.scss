@@ -50,6 +50,10 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         color: var(--bs-body-color);
     }
 
+    p a {
+        display: inline-block;
+    }
+
     footer {
         z-index: 4;
     }
@@ -418,6 +422,10 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
             top: 0% !important;
         }
 
+        .text {
+            z-index: 2;
+        }
+        
         .text p {
             position: absolute;
             top: 45%;
