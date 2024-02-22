@@ -295,6 +295,16 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         width: 50%;
     }
 
+    .image-slide {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .image-slide div {
+        background-color: rgba($dark-pink, 0.75);
+    }
+
     .clickable-slide:hover {
         cursor: pointer;
         opacity: 70%;

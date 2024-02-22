@@ -4,21 +4,36 @@ import Button from 'react-bootstrap/Button';
 
 function Experience() {
     const workEntries = [
-        { title: "Konrad (Incoming)", start: "May 2024", end: "August 2024", content: "Incoming software engineer intern at Konrad" },
-        { title: "Questrade", start: "May 2023", end: "August 2023", content: "Interned as a web developer at Questrade" },
-        { title: "Downtown Surrey Business Improvement Association", start: "May 2022", end: "August 2022", content: "Interned as a web designer for local businesses" },
+        { title: "Konrad (Incoming)", start: "May 2024", end: "August 2024",
+        content: "Incoming software engineer intern at Konrad", imageLink: "/konrad.jpg" },
+        { title: "Questrade", start: "May 2023", end: "August 2023",
+        content: "Interned as a web developer at Questrade", imageLink: "/questrade.png" },
+        { title: "Downtown Surrey Business Improvement Association", start: "May 2022", end: "August 2022",
+        content: "Interned as a web designer for local businesses", imageLink: "/dsbia.jpg" },
     ]
 
     const projectEntries = [
-        { title: "Twizzy PetPal", start: "September 2023", end: "December 2023", content: "Pet adoption site for pet shelters and seekers (University of Toronto CSC309 Project)", link: "https://github.com/Twizzy-Petpal/CSC309-PetPal" },
-        { title: "Shifty Tech", start: "September 2023", content: "Programming tool using tensors and full movement to code for Hack the North (1st Place Replit Hack Winner)", link: "https://devpost.com/software/shiftytech" },
-        { title: "BestFlow", start: "September 2022", end: "December 2022", content: "Chatbot diagnostic tool to analyse and visualize conversations (University of Toronto CSC207 Project)", link: "https://github.com/BestFloww/BestFlow" },
+        { title: "Twizzy PetPal", start: "September 2023", end: "December 2023",
+        content: "Pet adoption site for pet shelters and seekers (University of Toronto CSC309 Project)",
+        link: "https://github.com/Twizzy-Petpal/CSC309-PetPal", imageLink: "/Petpal.svg" },
+        { title: "Shifty Tech", start: "September 2023",
+        content: "Programming tool using tensors and full movement to code for Hack the North (1st Place Replit Hack Winner)",
+        link: "https://devpost.com/software/shiftytech", imageLink: "/ShiftyTech.svg" },
+        { title: "BestFlow", start: "September 2022", end: "December 2022",
+        content: "Chatbot diagnostic tool to analyse and visualize conversations (University of Toronto CSC207 Project)",
+        link: "https://github.com/BestFloww/BestFlow", imageLink: "/BestFlow.svg" },
     ]
 
     const gameEntries = [
-        { title: "Ascent", start: "September 2023", end: "December 2023", content: "An enjoyable \"make-or-break\" relationships 3D, 2-Player, Co-Operative Platformer experience (University of Toronto CSC404 Project)", link: "https://tomas-ha.itch.io/ascent" },
-        { title: "Seed You Later", start: "November 2022", content: "A short, cozy, and fun 2D pixel game full of charm and minigames! 3rd place winner of the University of Toronto's Game Design and Development Club's Fall 2022 Game Jam", link: "https://edwardhan.itch.io/seed-you-later" },
-        { title: "Moon's Side", start: "November 2021", content: "Humorous and short 3D puzzle game for the University of Toronto's Game Design and Development Club's Fall 2021 Game Jam", link: "https://kayleelchan.itch.io/moons-side" },
+        { title: "Ascent", start: "September 2023", end: "December 2023",
+        content: "An enjoyable \"make-or-break\" relationships 3D, 2-Player, Co-Operative Platformer experience (University of Toronto CSC404 Project)",
+        link: "https://tomas-ha.itch.io/ascent", imageLink: "/ascent.png" },
+        { title: "Seed You Later", start: "November 2022",
+        content: "A short, cozy, and fun 2D pixel game full of charm and minigames! 3rd place winner of the University of Toronto's Game Design and Development Club's Fall 2022 Game Jam",
+        link: "https://edwardhan.itch.io/seed-you-later", imageLink: "/seedyoulater.png" },
+        { title: "Moon's Side", start: "November 2021",
+        content: "Humorous and short 3D puzzle game for the University of Toronto's Game Design and Development Club's Fall 2021 Game Jam",
+        link: "https://kayleelchan.itch.io/moons-side"},
     ]
 
     return (
