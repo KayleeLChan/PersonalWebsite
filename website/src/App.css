@@ -1,3 +1,15 @@
+#root {
+  cursor: url('/public/Mouse.svg'), auto;
+}
+
+#root a:hover, #root .clickable-slide:hover {
+  cursor: url('/public/MousePointer.svg'), auto;
+}
+
+#root #text:hover {
+  cursor: url('/public/MouseText.svg'), auto;
+}
+
 .App {
   text-align: center;
 }
