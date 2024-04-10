@@ -18,7 +18,7 @@ const CardCarousel = ({ entries }) => {
                     clickable: true,
                 }}
                 modules={[Mousewheel, Pagination]}
-                className="mySwiper w-75"
+                className="mySwiper rounded-3 w-75"
             >
                 {entries.map((entry) => (
                     <SwiperSlide

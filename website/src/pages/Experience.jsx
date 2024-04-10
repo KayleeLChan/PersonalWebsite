@@ -25,8 +25,8 @@ function Experience() {
     ]
 
     const gameEntries = [
-        { title: "Ascent", start: "September 2023", end: "December 2023",
-        content: "An enjoyable \"make-or-break\" relationships 3D, 2-Player, Co-Operative Platformer experience (University of Toronto CSC404 Project)",
+        { title: "Ascent", start: "September 2023", end: "April 2024",
+        content: "An enjoyable \'make-or-break relationships\' 3D, 2-Player, Co-Operative Platformer experience (University of Toronto CSC404 Project)",
         link: "https://tomas-ha.itch.io/ascent", imageLink: "/ascent.png" },
         { title: "Seed You Later", start: "November 2022",
         content: "A short, cozy, and fun 2D pixel game full of charm and minigames! 3rd place winner of the University of Toronto's Game Design and Development Club's Fall 2022 Game Jam",
