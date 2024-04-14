@@ -415,20 +415,20 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         .avatar>div:first-child {
             position: absolute;
             top: 25% !important;
-            left: 25% !important;
+            left: 10% !important;
             transform: translate(0, 0) !important;
         }
 
         .item > img {
             position: absolute !important;
             top: 25% !important;
-            left: 25% !important;
+            left: 10% !important;
         }
 
         .popup {
             position: absolute;
             top: 25%;
-            left: 33%;
+            left: 25%;
         }
 
         // Text layers should be justified to the right
@@ -445,6 +445,25 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
             position: absolute;
             top: 45%;
             padding: 0 5rem 0 5rem;
+        }
+    }
+
+    // Adjust avatar and text placement on xxl screens
+    @include media-breakpoint-up(xxl) {
+        .avatar>div:first-child {
+            left: 20% !important;
+        }
+
+        .item > img {
+            left: 20% !important;
+        }
+
+        .popup {
+            left: 27%;
+        }
+
+        .text p {
+            padding: 0 15rem 0 15rem;
         }
     }
 }
