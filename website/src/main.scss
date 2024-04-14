@@ -177,6 +177,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     }
 
     .popup {
+        position: absolute;
         z-index: 2;
         height: max(40vh, 50%);
         display: flex;
@@ -414,21 +415,12 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         // Art layers should be to the left
         .avatar>div:first-child {
             position: absolute;
-            top: 25% !important;
-            left: 10% !important;
-            transform: translate(0, 0) !important;
+            transform: translate(-150%, -50%);
         }
 
         .item > img {
             position: absolute !important;
-            top: 25% !important;
-            left: 10% !important;
-        }
-
-        .popup {
-            position: absolute;
-            top: 25%;
-            left: 25%;
+            transform: translate(-100%, 0);
         }
 
         // Text layers should be justified to the right
@@ -445,25 +437,6 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
             position: absolute;
             top: 45%;
             padding: 0 5rem 0 5rem;
-        }
-    }
-
-    // Adjust avatar and text placement on xxl screens
-    @include media-breakpoint-up(xxl) {
-        .avatar>div:first-child {
-            left: 20% !important;
-        }
-
-        .item > img {
-            left: 20% !important;
-        }
-
-        .popup {
-            left: 27%;
-        }
-
-        .text p {
-            padding: 0 15rem 0 15rem;
         }
     }
 }

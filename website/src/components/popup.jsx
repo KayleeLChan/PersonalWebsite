@@ -6,11 +6,11 @@ const Popup = ({ showPopup, setShowPopup }) => {
   const springProps = useSpring({
     opacity: showPopup ? 1 : 0,
     translateY: showPopup ? 0 : 10,
-    from: { opacity: 0, translateY: 10 },
+    from: { opacity: 0, translateX: -15, translateY: 10 },
     to: async (next) => {
       if (showPopup) {
-        await next({ opacity: 1, translateY: 0 });
-        await next({ opacity: 0, translateY: 10 });
+        await next({ opacity: 1, translateX: -15, translateY: 0 });
+        await next({ opacity: 0, translateX: -15, translateY: 10 });
         setShowPopup(false);
       }
     },
