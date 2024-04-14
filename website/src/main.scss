@@ -78,6 +78,11 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         color: #{$primary-white};
     }
 
+    .underline {
+        text-decoration: underline !important;
+        text-underline-offset: 0.15em;
+    }
+
     .btn-outline-primary-white:focus {
         color: #{$primary-white};
     }
