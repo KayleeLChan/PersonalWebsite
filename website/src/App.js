@@ -8,9 +8,11 @@ import Experience from "./pages/Experience";
 import About from "./pages/About";
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
+    <>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -23,6 +25,8 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    <Analytics />
+    </>
   );
 }
 
