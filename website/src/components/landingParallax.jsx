@@ -32,7 +32,7 @@ const LandingParallax = ({ triggerBottom }) => {
 
     const [showPopup, setShowPopup] = useState(false);
 
-    const handleScroll = () => {
+    const levelUpScroll = () => {
         // For each unseen item, show popup then set to seen
         refsArray.forEach(({ ref, seenState, setSeen }) => {
             if (ref.current && !seenState && ref.current.isSticky) {
@@ -47,14 +47,58 @@ const LandingParallax = ({ triggerBottom }) => {
         }
     };
 
+    const changeCrumb = (crumb, width, threshold) => {
+        if (width > threshold) {
+            crumb.classList.add('reached');
+        }
+        else {
+            crumb.classList.remove('reached');
+        }
+    }
+
     // Target parallax container, then track its scroll to trigger animations
     useEffect(() => {
         const container = document.querySelector('.parallax')
-        container.addEventListener('scroll', handleScroll)
+        const breadpath = document.querySelector('.breadcrumb-progress');
+        const intro = document.querySelector('.breadcrumb-introduction');
+        const edu = document.querySelector('.breadcrumb-education');
+        const interest = document.querySelector('.breadcrumb-interests');
+        const games = document.querySelector('.breadcrumb-games');
+        const work = document.querySelector('.breadcrumb-work');
+        const thanks = document.querySelector('.breadcrumb-thanks');
+        const explore = document.querySelector('.breadcrumb-explore');
+    
+        const breadcrumbScroll = () => {
+            // Calculate how much of the page has been scrolled
+            const scrollTop = container.scrollTop;
+            const scrollHeight = container.scrollHeight - container.clientHeight;
+            const scrollPercentage = (scrollTop / scrollHeight) * 100;
+    
+            // Calculate the width based on the scroll percentage
+            const maxWidth = 920; // Maximum width of the breadpath
+            const minWidth = 0; // Minimum width of the breadpath
+            const width = minWidth + (maxWidth - minWidth) * (scrollPercentage / 100);
+
+            changeCrumb(intro, width, 0);
+            changeCrumb(edu, width, 162);
+            changeCrumb(interest, width, 325);
+            changeCrumb(games, width, 487);
+            changeCrumb(work, width, 623);
+            changeCrumb(thanks, width, 770);
+            changeCrumb(explore, width, 915);
+    
+            // Set the width and background color of the breadpath
+            breadpath.style.width = `${width}px`;
+        };
+    
+        container.addEventListener('scroll', levelUpScroll);
+        container.addEventListener('scroll', breadcrumbScroll);
+    
         return () => {
-            container.removeEventListener('scroll', handleScroll)
-        }
-    })
+            container.removeEventListener('scroll', levelUpScroll);
+            container.removeEventListener('scroll', breadcrumbScroll);
+        };
+    }, []);
 
     return (
         <Parallax pages={18} className="parallax">
@@ -73,8 +117,6 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 0.5, end: 1.5 }}
                 speed={1.7}
                 className="item"
-                id="introduction"
-                ref={introduction}
             >
                 <img src="Binary.svg" alt="Binary code" />
             </ParallaxLayer>
@@ -83,6 +125,8 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 1, end: 1.7 }}
                 speed={2.3}
                 className="text"
+                id="introduction"
+                ref={introduction}
             >
                 <p className="text-center">Hello world! I’m Kaylee Chan, an aspiring game developer, web developer, and avid programmer. Thanks for dropping by!</p>
             </ParallaxLayer>
@@ -91,8 +135,6 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 3, end: 4.5 }}
                 speed={1.7}
                 className="item"
-                id="education"
-                ref={education}
             >
                 <img src="UofT.svg" alt="University of Toronto logo" />
             </ParallaxLayer>
@@ -101,6 +143,8 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 3.5, end: 4.2 }}
                 speed={2.3}
                 className="text"
+                id="education"
+                ref={education}
             >
                 <p className="text-center">I am currently a third year student at the University of Toronto, studying a specialist in Computer Science with a focus in AI and Game Design, as well as a certificate in Business Fundamentals.</p>
             </ParallaxLayer>
@@ -109,8 +153,6 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 6, end: 7.5 }}
                 speed={1.7}
                 className="item"
-                id="interests"
-                ref={interests}
             >
                 <img src="Art.svg" alt="Paint palette" />
             </ParallaxLayer>
@@ -119,6 +161,8 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 6.5, end: 7.2 }}
                 speed={2.3}
                 className="text"
+                id="interests"
+                ref={interests}
             >
                 <p className="text-center">As someone who loves the fine arts, I like to be as creative as possible to make experiences people can enjoy and I can be proud of!</p>
             </ParallaxLayer>
@@ -127,8 +171,6 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 9, end: 10.5 }}
                 speed={1.7}
                 className="item"
-                id="games"
-                ref={games}
             >
                 <img src="Game.svg" alt="Game element from Ascent and Seed You Later" />
             </ParallaxLayer>
@@ -137,6 +179,8 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 9.5, end: 10.2 }}
                 speed={2.3}
                 className="text"
+                id="games"
+                ref={games}
             >
                 <p className="text-center">Some examples are games I’ve worked on, such as <a href="https://tomas-ha.itch.io/ascent" target="_blank" rel="noopener noreferrer" aria-label="Ascent itch.io page (opens in new tab)">Ascent</a> and <a href="https://edwardhan.itch.io/seed-you-later" target="_blank" rel="noopener noreferrer" aria-label="Seed You Later itch.io page (opens in new tab)"> Seed You Later</a>, as well as websites, such as the one you're on right now!</p>
             </ParallaxLayer>
@@ -145,8 +189,6 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 12, end: 13.5 }}
                 speed={1.7}
                 className="item"
-                id="work"
-                ref={work}
             >
                 <img src="Questrade.svg" alt="Questrade logo" />
             </ParallaxLayer>
@@ -155,6 +197,8 @@ const LandingParallax = ({ triggerBottom }) => {
                 sticky={{ start: 12.5, end: 13.2 }}
                 speed={2.3}
                 className="text"
+                id="work"
+                ref={work}
             >
                 <p className="text-center">I also take my creativity and problem-solving into my internships, like at <a href="https://www.linkedin.com/pulse/intern-spotlight-kaylee-chan-web-developer-questrade/" target="_blank" rel="noopener noreferrer" aria-label="Questrade internship article (opens in new tab)">Questrade</a>.</p>
             </ParallaxLayer>
