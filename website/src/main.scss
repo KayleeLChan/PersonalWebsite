@@ -136,6 +136,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     .parallax img {
         aspect-ratio: 1 /1;
         height: 40vh;
+        max-height: 30vw;
     }
 
     .parallax p {
@@ -159,6 +160,65 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
 
     .parallax::-webkit-scrollbar {
         display: none;
+    }
+
+    .breadcrumbs {
+        z-index: 3;
+        height: min-content;
+        position: relative;
+        display: none;
+    }
+
+    .bc .btn{
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        background-color: #{$light-pink};
+        border-color: #{$light-pink};
+        z-index: 3;
+        padding: 0;
+    }
+
+    .bc p {
+        color: #{$light-pink};
+    }
+
+    .bc:hover .btn {
+        background-color: #{$light-green} !important;
+        border-color: #{$light-green} !important;
+    }
+
+    .bc:hover p {
+        color: #{$light-green} !important;
+    }
+
+    .breadpath {
+        position: absolute;
+        height: 3px;
+        top: 6px;
+        left: 70px;
+        width: 920px;
+        background-color: #{$light-pink};
+        z-index: 1;
+    }
+
+    .breadcrumb-progress {
+        position: absolute;
+        height: 3px;
+        top: 6px;
+        left: 70px;
+        width: 0px;
+        background-color: #{$primary-green};
+        z-index: 2;
+    }
+
+    .reached .btn {
+        background-color: #{$primary-green};
+        border-color: #{$primary-green};
+    }
+
+    .reached p {
+        color: #{$primary-green};
     }
 
     .avatar {
@@ -401,7 +461,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         }
     }
 
-    // Change landing parallax to be side by side on xl and up screens
+    // Change landing parallax to be side by side on xl and up screens and show breadcrumbs
     @include media-breakpoint-up(xl) {
         .avatar, .popup, .item {
             max-height: 100% !important;
@@ -437,6 +497,11 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
             position: absolute;
             top: 45%;
             padding: 0 5rem 0 5rem;
+        }
+
+        .breadcrumbs {
+            display: flex;
+            flex-direction: row;
         }
     }
 }
