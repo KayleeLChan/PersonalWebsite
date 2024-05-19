@@ -146,7 +146,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="education"
                 ref={education}
             >
-                <p className="text-center">I am currently a third year student at the University of Toronto, studying a specialist in Computer Science with a focus in AI and Game Design, as well as a certificate in Business Fundamentals.</p>
+                <p className="text-center">I am currently a fourth year student at the University of Toronto, studying a specialist in Computer Science with a focus in AI and Game Design, as well as a certificate in Business Fundamentals.</p>
             </ParallaxLayer>
             <ParallaxLayer
                 offset={5.5}

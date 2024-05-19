@@ -136,7 +136,6 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     .parallax img {
         aspect-ratio: 1 /1;
         height: 40vh;
-        max-height: 30vw;
     }
 
     .parallax p {
@@ -481,6 +480,11 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         .item > img {
             position: absolute !important;
             transform: translate(-100%, 0);
+        }
+
+        // Don't grow avatar too large if width is not much larger than height
+        .parallax img {
+            max-height: 30vw;
         }
 
         // Text layers should be justified to the right
