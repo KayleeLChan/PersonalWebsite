@@ -408,6 +408,18 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
         text-decoration: none;
     }
 
+    .contact-text:hover {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+
+    .contact-text:active {
+        font-size: 1.25rem;
+        margin-bottom: 0;
+        text-decoration: none;
+    }
+
     @include media-breakpoint-down(md) {
         nav>.large-nav {
             display: none !important;
