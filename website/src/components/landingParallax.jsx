@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import ExploreGrid from './exploreGrid'
 import Popup from './popup';
+import * as PublicPaths from '../utils/publicPaths';
 
 const LandingParallax = ({ triggerBottom }) => {
     // References to each layer containing an item, and whether it's been seen or not
@@ -108,7 +109,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 className="avatar"
             >
                 <div>
-                    <img src="Avatar.svg" alt="Kaylee Chan pixel avatar" />
+                    <img src={`${PublicPaths.AVATAR_IMAGES_PATH}/Avatar.svg`} alt="Kaylee Chan pixel avatar" />
                     <Popup showPopup={showPopup} setShowPopup={setShowPopup} />
                 </div>
             </ParallaxLayer>
@@ -118,7 +119,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 speed={1.7}
                 className="item"
             >
-                <img src="Binary.svg" alt="Binary code" />
+                <img src={`${PublicPaths.LANDING_IMAGES_PATH}/Binary.svg`} alt="Binary code" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={1}
@@ -136,7 +137,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 speed={1.7}
                 className="item"
             >
-                <img src="UofT.svg" alt="University of Toronto logo" />
+                <img src={`${PublicPaths.LANDING_IMAGES_PATH}/UofT.svg`} alt="University of Toronto logo" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={3.5}
@@ -154,7 +155,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 speed={1.7}
                 className="item"
             >
-                <img src="Art.svg" alt="Paint palette" />
+                <img src={`${PublicPaths.LANDING_IMAGES_PATH}/Art.svg`} alt="Paint palette" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={6.5}
@@ -172,7 +173,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 speed={1.7}
                 className="item"
             >
-                <img src="Game.svg" alt="Game element from Ascent and Seed You Later" />
+                <img src={`${PublicPaths.LANDING_IMAGES_PATH}/Game.svg`} alt="Game element from Ascent and Seed You Later" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={9.5}
@@ -190,7 +191,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 speed={1.7}
                 className="item"
             >
-                <img src="Questrade.svg" alt="Questrade logo" />
+                <img src={`${PublicPaths.LANDING_IMAGES_PATH}/Questrade.svg`} alt="Questrade logo" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={12.5}
@@ -208,7 +209,7 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="thanks"
             >
                 <div className="d-flex flex-column justify-content-center align-items-center p-3">
-                    <img src="Smile.svg" alt="Kaylee Chan pixel avatar smiling" />
+                    <img src={`${PublicPaths.AVATAR_IMAGES_PATH}/Smile.svg`} alt="Kaylee Chan pixel avatar smiling" />
                     <h2 className="mt-5 fs-3">Thank you for visting!</h2>
                 </div>
             </ParallaxLayer>

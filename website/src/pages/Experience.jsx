@@ -2,35 +2,45 @@ import React from 'react';
 import CardCarousel from '../components/cardCarousel';
 import Button from 'react-bootstrap/Button';
 
+const EXPERIENCE_IMAGES_PATH = "experienceImages"
+const WORK_IMAGES_PATH = `${EXPERIENCE_IMAGES_PATH}/workImages`
+const PROJECT_IMAGES_PATH = `${EXPERIENCE_IMAGES_PATH}/projectImages`
+const GAME_IMAGES_PATH = `${EXPERIENCE_IMAGES_PATH}/gameImages`
+
 function Experience() {
     const workEntries = [
-        { title: "Konrad (Incoming)", start: "May 2024", end: "August 2024",
-        content: "Incoming software engineer intern at Konrad", imageLink: "/konrad.jpg" },
+        { title: "Royal Bank of Canada", start: "September 2024", end: "April 2025",
+            content: "Current DevOps Developer Co-Op at RBC", imageLink: `${WORK_IMAGES_PATH}/rbc.png` },
+        { title: "Konrad", start: "May 2024", end: "August 2024",
+        content: "Interned as a software engineer at Konrad", imageLink: `${WORK_IMAGES_PATH}/konrad.jpg` },
         { title: "Questrade", start: "May 2023", end: "August 2023",
-        content: "Interned as a web developer at Questrade", imageLink: "/questrade.png" },
+        content: "Interned as a web developer at Questrade", imageLink: `${WORK_IMAGES_PATH}/questrade.png` },
         { title: "Downtown Surrey Business Improvement Association", start: "May 2022", end: "August 2022",
-        content: "Interned as a web designer for local businesses", imageLink: "/dsbia.jpg" },
+        content: "Interned as a web designer for local businesses", imageLink: `${WORK_IMAGES_PATH}/dsbia.jpg` },
     ]
 
     const projectEntries = [
         { title: "Twizzy PetPal", start: "September 2023", end: "December 2023",
         content: "Pet adoption site for pet shelters and seekers (University of Toronto CSC309 Project)",
-        link: "https://github.com/Twizzy-Petpal/CSC309-PetPal", imageLink: "/Petpal.svg" },
+        link: "https://github.com/Twizzy-Petpal/CSC309-PetPal", imageLink: `${PROJECT_IMAGES_PATH}/Petpal.svg` },
         { title: "Shifty Tech", start: "September 2023",
         content: "Programming tool using tensors and full movement to code for Hack the North (1st Place Replit Hack Winner)",
-        link: "https://devpost.com/software/shiftytech", imageLink: "/ShiftyTech.svg" },
+        link: "https://devpost.com/software/shiftytech", imageLink: `${PROJECT_IMAGES_PATH}/ShiftyTech.svg` },
         { title: "BestFlow", start: "September 2022", end: "December 2022",
         content: "Chatbot diagnostic tool to analyse and visualize conversations (University of Toronto CSC207 Project)",
-        link: "https://github.com/BestFloww/BestFlow", imageLink: "/BestFlow.svg" },
+        link: "https://github.com/BestFloww/BestFlow", imageLink: `${PROJECT_IMAGES_PATH}/BestFlow.svg` },
     ]
 
     const gameEntries = [
+        { title: "Chute Your Chot", start: "November 2024",
+            content: "Simple web-based sorting game for the University of Toronto's Game Design and Development Club's Fall 2024 Game Jam",
+            link: "https://kayleelchan.itch.io/chute-your-chot"},
         { title: "Ascent", start: "September 2023", end: "April 2024",
         content: "An enjoyable \'make-or-break relationships\' 3D, 2-Player, Co-Operative Platformer experience (University of Toronto CSC404 Project)",
-        link: "https://tomas-ha.itch.io/ascent", imageLink: "/ascent.png" },
+        link: "https://tomas-ha.itch.io/ascent", imageLink: `${GAME_IMAGES_PATH}/ascent.png` },
         { title: "Seed You Later", start: "November 2022",
         content: "A short, cozy, and fun 2D pixel game full of charm and minigames! 3rd place winner of the University of Toronto's Game Design and Development Club's Fall 2022 Game Jam",
-        link: "https://edwardhan.itch.io/seed-you-later", imageLink: "/seedyoulater.png" },
+        link: "https://edwardhan.itch.io/seed-you-later", imageLink: `${GAME_IMAGES_PATH}/seedyoulater.png` },
         { title: "Moon's Side", start: "November 2021",
         content: "Humorous and short 3D puzzle game for the University of Toronto's Game Design and Development Club's Fall 2021 Game Jam",
         link: "https://kayleelchan.itch.io/moons-side"},

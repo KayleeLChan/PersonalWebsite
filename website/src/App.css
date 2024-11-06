@@ -1,13 +1,13 @@
 #root {
-  cursor: url('/public/Mouse.svg'), auto;
+  cursor: url('/public/mouseImages/Mouse.svg'), auto;
 }
 
 #root a:hover, #root .clickable-slide:hover {
-  cursor: url('/public/MousePointer.svg'), auto;
+  cursor: url('/public/mouseImages/MousePointer.svg'), auto;
 }
 
 #root #text:hover {
-  cursor: url('/public/MouseText.svg'), auto;
+  cursor: url('/public/mouseImages/MouseText.svg'), auto;
 }
 
 .App {

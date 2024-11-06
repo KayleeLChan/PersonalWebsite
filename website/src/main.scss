@@ -405,6 +405,7 @@ $theme-colors: map-merge($brand-colours, $theme-colors);
     .contact-text {
         font-size: 1.25rem;
         margin-bottom: 0;
+        text-decoration: none;
     }
 
     @include media-breakpoint-down(md) {
