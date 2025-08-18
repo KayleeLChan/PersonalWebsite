@@ -10,9 +10,9 @@ const GAME_IMAGES_PATH = `${EXPERIENCE_IMAGES_PATH}/gameImages`
 function Experience() {
     const workEntries = [
         { title: "Royal Bank of Canada", start: "September 2024", end: "April 2025",
-            content: "Current DevOps Developer Co-Op at RBC", imageLink: `${WORK_IMAGES_PATH}/rbc.png` },
+            content: "Previous DevOps Developer Co-Op at RBC", imageLink: `${WORK_IMAGES_PATH}/rbc.png` },
         { title: "Konrad", start: "May 2024", end: "August 2024",
-        content: "Interned as a software engineer at Konrad", imageLink: `${WORK_IMAGES_PATH}/konrad.jpg` },
+        content: "Interned as a Software Engineer at Konrad", imageLink: `${WORK_IMAGES_PATH}/konrad.jpg` },
         { title: "Questrade", start: "May 2023", end: "August 2023",
         content: "Interned as a web developer at Questrade", imageLink: `${WORK_IMAGES_PATH}/questrade.png` },
         { title: "Downtown Surrey Business Improvement Association", start: "May 2022", end: "August 2022",
