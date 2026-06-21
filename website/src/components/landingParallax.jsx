@@ -5,30 +5,30 @@ import Popup from './popup';
 import * as PublicPaths from '../utils/publicPaths';
 
 const LandingParallax = ({ triggerBottom }) => {
-    // References to each layer containing an item, and whether it's been seen or not
-    const introduction = useRef();
-    const [introductionSeen, setIntroductionSeen] = useState(false);
-
-    const education = useRef();
-    const [educationSeen, setEducationSeen] = useState(false);
-
-    const interests = useRef();
-    const [interestsSeen, setInterestsSeen] = useState(false);
-
-    const games = useRef();
-    const [gamesSeen, setGamesSeen] = useState(false);
-
-    const work = useRef();
-    const [workSeen, setWorkSeen] = useState(false);
-
-    const current = useRef();
-    const [currentSeen, setCurrentSeen] = useState(false);
-
-    const explore = useRef();
-
     const [showPopup, setShowPopup] = useState(false);
 
     const levelUpScroll = useCallback(() => {
+        // References to each layer containing an item, and whether it's been seen or not
+        const introduction = useRef();
+        const [introductionSeen, setIntroductionSeen] = useState(false);
+
+        const education = useRef();
+        const [educationSeen, setEducationSeen] = useState(false);
+
+        const interests = useRef();
+        const [interestsSeen, setInterestsSeen] = useState(false);
+
+        const games = useRef();
+        const [gamesSeen, setGamesSeen] = useState(false);
+
+        const work = useRef();
+        const [workSeen, setWorkSeen] = useState(false);
+
+        const current = useRef();
+        const [currentSeen, setCurrentSeen] = useState(false);
+
+        const explore = useRef();
+
         const refsArray = [
             { ref: introduction, seenState: introductionSeen, setSeen: setIntroductionSeen },
             { ref: education, seenState: educationSeen, setSeen: setEducationSeen },
