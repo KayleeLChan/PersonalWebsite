@@ -24,20 +24,20 @@ const LandingParallax = ({ triggerBottom }) => {
     const current = useRef();
     const [currentSeen, setCurrentSeen] = useState(false);
 
-    const refsArray = [
-        { ref: introduction, seenState: introductionSeen, setSeen: setIntroductionSeen },
-        { ref: education, seenState: educationSeen, setSeen: setEducationSeen },
-        { ref: interests, seenState: interestsSeen, setSeen: setInterestsSeen },
-        { ref: games, seenState: gamesSeen, setSeen: setGamesSeen },
-        { ref: work, seenState: workSeen, setSeen: setWorkSeen },
-        { ref: current, seenState: currentSeen, setSeen: setCurrentSeen },
-    ];
-
     const explore = useRef();
 
     const [showPopup, setShowPopup] = useState(false);
 
     const levelUpScroll = useCallback(() => {
+        const refsArray = [
+            { ref: introduction, seenState: introductionSeen, setSeen: setIntroductionSeen },
+            { ref: education, seenState: educationSeen, setSeen: setEducationSeen },
+            { ref: interests, seenState: interestsSeen, setSeen: setInterestsSeen },
+            { ref: games, seenState: gamesSeen, setSeen: setGamesSeen },
+            { ref: work, seenState: workSeen, setSeen: setWorkSeen },
+            { ref: current, seenState: currentSeen, setSeen: setCurrentSeen },
+        ];
+
         // For each unseen item, show popup then set to seen
         refsArray.forEach(({ ref, seenState, setSeen }) => {
             if (ref.current && !seenState && ref.current.isSticky) {
@@ -50,7 +50,7 @@ const LandingParallax = ({ triggerBottom }) => {
         if (explore.current && explore.current.isSticky) {
             triggerBottom();
         }
-    }, [refsArray, triggerBottom]);
+    }, [triggerBottom]);
 
     const changeCrumb = (crumb, width, threshold) => {
         if (width > threshold) {
@@ -105,7 +105,7 @@ const LandingParallax = ({ triggerBottom }) => {
             container.removeEventListener('scroll', levelUpScroll);
             container.removeEventListener('scroll', breadcrumbScroll);
         };
-    }, []);
+    }, [levelUpScroll]);
 
     return (
         <Parallax pages={21} className="parallax">
