@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import ExploreGrid from './exploreGrid'
 import Popup from './popup';
@@ -21,19 +21,23 @@ const LandingParallax = ({ triggerBottom }) => {
     const work = useRef();
     const [workSeen, setWorkSeen] = useState(false);
 
-    const refsArray = [
-        { ref: introduction, seenState: introductionSeen, setSeen: setIntroductionSeen },
-        { ref: education, seenState: educationSeen, setSeen: setEducationSeen },
-        { ref: interests, seenState: interestsSeen, setSeen: setInterestsSeen },
-        { ref: games, seenState: gamesSeen, setSeen: setGamesSeen },
-        { ref: work, seenState: workSeen, setSeen: setWorkSeen },
-    ];
+    const current = useRef();
+    const [currentSeen, setCurrentSeen] = useState(false);
 
     const explore = useRef();
 
     const [showPopup, setShowPopup] = useState(false);
 
-    const levelUpScroll = () => {
+    const levelUpScroll = useCallback(() => {
+        const refsArray = [
+            { ref: introduction, seenState: introductionSeen, setSeen: setIntroductionSeen },
+            { ref: education, seenState: educationSeen, setSeen: setEducationSeen },
+            { ref: interests, seenState: interestsSeen, setSeen: setInterestsSeen },
+            { ref: games, seenState: gamesSeen, setSeen: setGamesSeen },
+            { ref: work, seenState: workSeen, setSeen: setWorkSeen },
+            { ref: current, seenState: currentSeen, setSeen: setCurrentSeen },
+        ];
+
         // For each unseen item, show popup then set to seen
         refsArray.forEach(({ ref, seenState, setSeen }) => {
             if (ref.current && !seenState && ref.current.isSticky) {
@@ -46,7 +50,7 @@ const LandingParallax = ({ triggerBottom }) => {
         if (explore.current && explore.current.isSticky) {
             triggerBottom();
         }
-    };
+    }, [triggerBottom, currentSeen, educationSeen, gamesSeen, interestsSeen, introductionSeen, workSeen]);
 
     const changeCrumb = (crumb, width, threshold) => {
         if (width > threshold) {
@@ -66,6 +70,7 @@ const LandingParallax = ({ triggerBottom }) => {
         const interest = document.querySelector('.breadcrumb-interests');
         const games = document.querySelector('.breadcrumb-games');
         const work = document.querySelector('.breadcrumb-work');
+        const current = document.querySelector('.breadcrumb-current');
         const thanks = document.querySelector('.breadcrumb-thanks');
         const explore = document.querySelector('.breadcrumb-explore');
     
@@ -76,7 +81,7 @@ const LandingParallax = ({ triggerBottom }) => {
             const scrollPercentage = (scrollTop / scrollHeight) * 100;
     
             // Calculate the width based on the scroll percentage
-            const maxWidth = 920; // Maximum width of the breadpath
+            const maxWidth = 1075; // Maximum width of the breadpath
             const minWidth = 0; // Minimum width of the breadpath
             const width = minWidth + (maxWidth - minWidth) * (scrollPercentage / 100);
 
@@ -85,8 +90,9 @@ const LandingParallax = ({ triggerBottom }) => {
             changeCrumb(interest, width, 325);
             changeCrumb(games, width, 487);
             changeCrumb(work, width, 623);
-            changeCrumb(thanks, width, 770);
-            changeCrumb(explore, width, 915);
+            changeCrumb(current, width, 775);
+            changeCrumb(thanks, width, 920);
+            changeCrumb(explore, width, 1070);
     
             // Set the width and background color of the breadpath
             breadpath.style.width = `${width}px`;
@@ -99,13 +105,13 @@ const LandingParallax = ({ triggerBottom }) => {
             container.removeEventListener('scroll', levelUpScroll);
             container.removeEventListener('scroll', breadcrumbScroll);
         };
-    }, []);
+    }, [levelUpScroll]);
 
     return (
-        <Parallax pages={18} className="parallax">
+        <Parallax pages={21} className="parallax">
             <ParallaxLayer
                 offset={0}
-                sticky={{ start: 0, end: 14.5 }}
+                sticky={{ start: 0, end: 16.9 }}
                 className="avatar"
             >
                 <div>
@@ -113,6 +119,7 @@ const LandingParallax = ({ triggerBottom }) => {
                     <Popup showPopup={showPopup} setShowPopup={setShowPopup} />
                 </div>
             </ParallaxLayer>
+
             <ParallaxLayer
                 offset={0.5}
                 sticky={{ start: 0.5, end: 1.5 }}
@@ -131,6 +138,7 @@ const LandingParallax = ({ triggerBottom }) => {
             >
                 <p className="text-center">Hello world! I’m Kaylee Chan, an aspiring game developer, web developer, and avid programmer. Thanks for dropping by!</p>
             </ParallaxLayer>
+
             <ParallaxLayer
                 offset={3}
                 sticky={{ start: 3, end: 4.5 }}
@@ -147,8 +155,9 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="education"
                 ref={education}
             >
-                <p className="text-center">I am currently a fourth year student at the University of Toronto, studying a specialist in Computer Science with a focus in AI and Game Design, as well as a certificate in Business Fundamentals.</p>
+                <p className="text-center">I graduated from the University of Toronto, earning my BASc as a Computer Science specialist with a focus in AI, as well as a certificate in Business Fundamentals.</p>
             </ParallaxLayer>
+
             <ParallaxLayer
                 offset={5.5}
                 sticky={{ start: 6, end: 7.5 }}
@@ -167,6 +176,7 @@ const LandingParallax = ({ triggerBottom }) => {
             >
                 <p className="text-center">As someone who loves the fine arts, I like to be as creative as possible to make experiences people can enjoy and I can be proud of!</p>
             </ParallaxLayer>
+
             <ParallaxLayer
                 offset={8.3}
                 sticky={{ start: 9, end: 10.5 }}
@@ -185,6 +195,7 @@ const LandingParallax = ({ triggerBottom }) => {
             >
                 <p className="text-center">Some examples are games I’ve worked on, such as <a href="https://tomas-ha.itch.io/ascent" target="_blank" rel="noopener noreferrer" aria-label="Ascent itch.io page (opens in new tab)">Ascent</a> and <a href="https://edwardhan.itch.io/seed-you-later" target="_blank" rel="noopener noreferrer" aria-label="Seed You Later itch.io page (opens in new tab)"> Seed You Later</a>, as well as websites, such as the one you're on right now!</p>
             </ParallaxLayer>
+
             <ParallaxLayer
                 offset={7}
                 sticky={{ start: 12, end: 13.5 }}
@@ -201,11 +212,31 @@ const LandingParallax = ({ triggerBottom }) => {
                 id="work"
                 ref={work}
             >
-                <p className="text-center">I also take my creativity and problem-solving into my internships, like at <a href="https://www.linkedin.com/pulse/intern-spotlight-kaylee-chan-web-developer-questrade/" target="_blank" rel="noopener noreferrer" aria-label="Questrade internship article (opens in new tab)">Questrade</a>.</p>
+                <p className="text-center">I also took my creativity and problem-solving into my internships, like at <a href="https://www.linkedin.com/pulse/intern-spotlight-kaylee-chan-web-developer-questrade/" target="_blank" rel="noopener noreferrer" aria-label="Questrade internship article (opens in new tab)">Questrade</a>.</p>
+            </ParallaxLayer>
+
+            <ParallaxLayer
+                offset={9.5}
+                sticky={{ start: 15, end: 16.5 }}
+                speed={1.7}
+                className="item"
+            >
+                <img src={`${PublicPaths.LANDING_IMAGES_PATH}/Veeva.svg`} alt="Veeva logo" />
             </ParallaxLayer>
             <ParallaxLayer
                 offset={15.5}
-                sticky={{ start: 15.5, end: 16 }}
+                sticky={{ start: 15.5, end: 16.2 }}
+                speed={2.3}
+                className="text"
+                id="current"
+                ref={current}
+            >
+                <p className="text-center">In the next step of my journey, I am putting my passion to work with Veeva Systems!</p>
+            </ParallaxLayer>
+
+            <ParallaxLayer
+                offset={18.5}
+                sticky={{ start: 18.5, end: 19 }}
                 id="thanks"
             >
                 <div className="d-flex flex-column justify-content-center align-items-center p-3">
@@ -214,15 +245,15 @@ const LandingParallax = ({ triggerBottom }) => {
                 </div>
             </ParallaxLayer>
             <ParallaxLayer
-                offset={15.8}
+                offset={18.8}
                 factor={2}
                 speed={0.3}
             >
                 <div className="h-50 w-75 bg-dark-pink rounded-3" />
             </ParallaxLayer>
             <ParallaxLayer
-                offset={17}
-                sticky={{ start: 16.9, end: 18 }}
+                offset={20}
+                sticky={{ start: 19.9, end: 21 }}
                 id="explore"
                 ref={explore}
             >

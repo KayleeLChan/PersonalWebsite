@@ -9,6 +9,8 @@ const GAME_IMAGES_PATH = `${EXPERIENCE_IMAGES_PATH}/gameImages`
 
 function Experience() {
     const workEntries = [
+        { title: "Veeva Systems", start: "June 2026", end: "Present",
+            content: "Associate Software Engineer at Veeva", imageLink: `${WORK_IMAGES_PATH}/veeva.png` },
         { title: "Royal Bank of Canada", start: "September 2024", end: "April 2025",
             content: "Previous DevOps Developer Co-Op at RBC", imageLink: `${WORK_IMAGES_PATH}/rbc.png` },
         { title: "Konrad", start: "May 2024", end: "August 2024",
@@ -36,7 +38,7 @@ function Experience() {
             content: "Simple web-based sorting game for the University of Toronto's Game Design and Development Club's Fall 2024 Game Jam",
             link: "https://kayleelchan.itch.io/chute-your-chot"},
         { title: "Ascent", start: "September 2023", end: "April 2024",
-        content: "An enjoyable \'make-or-break relationships\' 3D, 2-Player, Co-Operative Platformer experience (University of Toronto CSC404 Project)",
+        content: "An enjoyable 'make-or-break relationships' 3D, 2-Player, Co-Operative Platformer experience (University of Toronto CSC404 Project)",
         link: "https://tomas-ha.itch.io/ascent", imageLink: `${GAME_IMAGES_PATH}/ascent.png` },
         { title: "Seed You Later", start: "November 2022",
         content: "A short, cozy, and fun 2D pixel game full of charm and minigames! 3rd place winner of the University of Toronto's Game Design and Development Club's Fall 2022 Game Jam",
