@@ -11,6 +11,7 @@ const Breadcrumbs = () => {
             <Breadcrumb link="#interests" text="Interests" />
             <Breadcrumb link="#games" text="Games" />
             <Breadcrumb link="#work" text="Work" />
+            <Breadcrumb link="#current" text="Current" />
             <Breadcrumb link="#thanks" text="Thanks" />
             <Breadcrumb link="#explore" text="Explore" />
         </div>

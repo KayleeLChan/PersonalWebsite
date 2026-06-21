@@ -9,6 +9,8 @@ const GAME_IMAGES_PATH = `${EXPERIENCE_IMAGES_PATH}/gameImages`
 
 function Experience() {
     const workEntries = [
+        { title: "Veeva Systems", start: "June 2026", end: "Present",
+            content: "Associate Software Engineer at Veeva", imageLink: `${WORK_IMAGES_PATH}/veeva.png` },
         { title: "Royal Bank of Canada", start: "September 2024", end: "April 2025",
             content: "Previous DevOps Developer Co-Op at RBC", imageLink: `${WORK_IMAGES_PATH}/rbc.png` },
         { title: "Konrad", start: "May 2024", end: "August 2024",
