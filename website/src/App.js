@@ -5,8 +5,8 @@ import Layout from "./components/layout";
 import Home from "./pages/Home";
 import Error404 from "./pages/404";
 import Experience from "./pages/Experience";
-import About from "./pages/About";
-import Blog from "./pages/Blog";
+// import About from "./pages/About";
+// import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import { Analytics } from "@vercel/analytics/react"
 
