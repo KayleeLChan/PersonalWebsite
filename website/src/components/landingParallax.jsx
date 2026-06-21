@@ -21,12 +21,16 @@ const LandingParallax = ({ triggerBottom }) => {
     const work = useRef();
     const [workSeen, setWorkSeen] = useState(false);
 
+    const current = useRef();
+    const [currentSeen, setCurrentSeen] = useState(false);
+
     const refsArray = [
         { ref: introduction, seenState: introductionSeen, setSeen: setIntroductionSeen },
         { ref: education, seenState: educationSeen, setSeen: setEducationSeen },
         { ref: interests, seenState: interestsSeen, setSeen: setInterestsSeen },
         { ref: games, seenState: gamesSeen, setSeen: setGamesSeen },
         { ref: work, seenState: workSeen, setSeen: setWorkSeen },
+        { ref: current, seenState: currentSeen, setSeen: setCurrentSeen },
     ];
 
     const explore = useRef();
@@ -66,6 +70,7 @@ const LandingParallax = ({ triggerBottom }) => {
         const interest = document.querySelector('.breadcrumb-interests');
         const games = document.querySelector('.breadcrumb-games');
         const work = document.querySelector('.breadcrumb-work');
+        const current = document.querySelector('.breadcrumb-current');
         const thanks = document.querySelector('.breadcrumb-thanks');
         const explore = document.querySelector('.breadcrumb-explore');
     
@@ -76,7 +81,7 @@ const LandingParallax = ({ triggerBottom }) => {
             const scrollPercentage = (scrollTop / scrollHeight) * 100;
     
             // Calculate the width based on the scroll percentage
-            const maxWidth = 920; // Maximum width of the breadpath
+            const maxWidth = 1075; // Maximum width of the breadpath
             const minWidth = 0; // Minimum width of the breadpath
             const width = minWidth + (maxWidth - minWidth) * (scrollPercentage / 100);
 
@@ -85,8 +90,9 @@ const LandingParallax = ({ triggerBottom }) => {
             changeCrumb(interest, width, 325);
             changeCrumb(games, width, 487);
             changeCrumb(work, width, 623);
-            changeCrumb(thanks, width, 770);
-            changeCrumb(explore, width, 915);
+            changeCrumb(current, width, 775);
+            changeCrumb(thanks, width, 920);
+            changeCrumb(explore, width, 1070);
     
             // Set the width and background color of the breadpath
             breadpath.style.width = `${width}px`;
@@ -102,10 +108,10 @@ const LandingParallax = ({ triggerBottom }) => {
     }, []);
 
     return (
-        <Parallax pages={18} className="parallax">
+        <Parallax pages={21} className="parallax">
             <ParallaxLayer
                 offset={0}
-                sticky={{ start: 0, end: 14.5 }}
+                sticky={{ start: 0, end: 16.9 }}
                 className="avatar"
             >
                 <div>
@@ -246,8 +252,8 @@ const LandingParallax = ({ triggerBottom }) => {
                 <div className="h-50 w-75 bg-dark-pink rounded-3" />
             </ParallaxLayer>
             <ParallaxLayer
-                offset={19}
-                sticky={{ start: 19.9, end: 20 }}
+                offset={20}
+                sticky={{ start: 19.9, end: 21 }}
                 id="explore"
                 ref={explore}
             >
