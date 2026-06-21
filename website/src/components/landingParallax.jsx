@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef, useCallback } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 import ExploreGrid from './exploreGrid'
 import Popup from './popup';
@@ -37,7 +37,7 @@ const LandingParallax = ({ triggerBottom }) => {
 
     const [showPopup, setShowPopup] = useState(false);
 
-    const levelUpScroll = () => {
+    const levelUpScroll = useCallback(() => {
         // For each unseen item, show popup then set to seen
         refsArray.forEach(({ ref, seenState, setSeen }) => {
             if (ref.current && !seenState && ref.current.isSticky) {
@@ -50,7 +50,7 @@ const LandingParallax = ({ triggerBottom }) => {
         if (explore.current && explore.current.isSticky) {
             triggerBottom();
         }
-    };
+    }, [refsArray, triggerBottom]);
 
     const changeCrumb = (crumb, width, threshold) => {
         if (width > threshold) {
@@ -105,7 +105,7 @@ const LandingParallax = ({ triggerBottom }) => {
             container.removeEventListener('scroll', levelUpScroll);
             container.removeEventListener('scroll', breadcrumbScroll);
         };
-    }, [levelUpScroll]);
+    }, []);
 
     return (
         <Parallax pages={21} className="parallax">
