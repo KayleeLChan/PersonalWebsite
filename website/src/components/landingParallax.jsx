@@ -37,21 +37,6 @@ const LandingParallax = ({ triggerBottom }) => {
 
     const [showPopup, setShowPopup] = useState(false);
 
-    const levelUpScroll = () => {
-        // For each unseen item, show popup then set to seen
-        refsArray.forEach(({ ref, seenState, setSeen }) => {
-            if (ref.current && !seenState && ref.current.isSticky) {
-                setShowPopup(true);
-                setSeen(true);
-            }
-        });
-
-        // If the last page is reached, then remove scroll prompt
-        if (explore.current && explore.current.isSticky) {
-            triggerBottom();
-        }
-    };
-
     const changeCrumb = (crumb, width, threshold) => {
         if (width > threshold) {
             crumb.classList.add('reached');
@@ -96,6 +81,21 @@ const LandingParallax = ({ triggerBottom }) => {
     
             // Set the width and background color of the breadpath
             breadpath.style.width = `${width}px`;
+        };
+
+        const levelUpScroll = () => {
+            // For each unseen item, show popup then set to seen
+            refsArray.forEach(({ ref, seenState, setSeen }) => {
+                if (ref.current && !seenState && ref.current.isSticky) {
+                    setShowPopup(true);
+                    setSeen(true);
+                }
+            });
+
+            // If the last page is reached, then remove scroll prompt
+            if (explore.current && explore.current.isSticky) {
+                triggerBottom();
+            }
         };
     
         container.addEventListener('scroll', levelUpScroll);
